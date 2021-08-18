@@ -1,0 +1,52 @@
+
+.bx-left-arrow-alt{
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+    color: #E11900;
+    position: relative;
+    right: 90px;
+}
+
+h1{
+    position: relative;
+    right: 23px;
+    text-align: center;
+}
+
+.container-fluid-1{
+    position: relative;
+    top: 70px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.h6{
+    width: 230px;
+    height: 45px;
+}
+
+.btn{
+    color: #E11900;
+    border: 1px solid #E11900;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 394px;
+    /* position: relative; */
+    /* left: 25px; */
+    /* top: 20px; */
+    padding: 10px;
+}
+
+.bx-plus{
+    font-size: 30px;
+    color: #E11900;
+}
+
+span{
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+}
