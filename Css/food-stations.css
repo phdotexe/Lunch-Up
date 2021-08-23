@@ -1,0 +1,97 @@
+@font-face {
+  font-family: poppins;
+  src: url(../fonts/Poppins-Regular.ttf) format("truetype"), url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+* {
+  font-family: poppins;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 40px;
+}
+
+.nav-bar__logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: #EB2C3C;
+}
+
+.nav-bar__list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.nav-bar__list__item {
+  padding: 8px 18px;
+}
+
+.nav-bar__list__item a {
+  text-decoration: none;
+  color: #121212;
+}
+
+.nav-bar__list__item a:hover {
+  color: #EB2C3C;
+}
+
+.nav-bar__list__item--active a {
+  color: #EB2C3C;
+}
+
+.nav-bar__list__item--btn {
+  background: #EB2C3C;
+  border: 2px solid #EB2C3C;
+  border-radius: 8px;
+}
+
+.nav-bar__list__item--btn:hover {
+  background: white;
+}
+
+.nav-bar__list__item--btn:hover a {
+  color: #EB2C3C;
+}
+
+.nav-bar__list__item--btn a {
+  color: white;
+}
+
+.food-stations {
+  margin: 55px 40px 0px;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #EB2C3C;
+}
+
+.food-stations p {
+  color: #C1C1C1;
+  font-weight: normal;
+}
+
+.food-stations p span {
+  color: #EB2C3C;
+}
+/*# sourceMappingURL=food-stations.css.map */
