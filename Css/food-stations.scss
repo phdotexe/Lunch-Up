@@ -1,0 +1,80 @@
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Regular.ttf) format('truetype'),
+         url(../fonts/Poppins-Regular.ttf) format('truetype');
+}
+*{
+    font-family: poppins;
+}
+
+//Declaring variables
+$primary_color : #EB2C3C;
+$secondary_color: #121212;
+
+//styling the nav bar
+.nav-bar{
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+    &__logo{
+        flex: 1;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        color: $primary_color;
+    }
+    &__list{
+        flex: 1;
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 27px;
+        &__item{
+            padding: 8px 18px;
+            a{
+                text-decoration: none;
+                color: $secondary_color;
+                &:hover{
+                    color: $primary_color;
+                }
+            }
+            &--active{
+                a{
+                    color: $primary_color;
+                }
+            }
+            &--btn{
+                background: $primary_color;
+                border: 2px solid $primary_color;
+                border-radius: 8px;
+                &:hover{
+                    background: white;
+                    a{
+                        color: $primary_color;
+                    }
+                }
+                a{
+                    color: white;
+                }
+            }
+        }
+
+    }
+}
+// styling main
+.food-stations{
+    margin: 55px 40px 0px;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: $primary_color;
+    p{
+        color: #C1C1C1;
+        font-weight: normal;
+        span{
+            color: $primary_color;
+        }
+    }
+}
