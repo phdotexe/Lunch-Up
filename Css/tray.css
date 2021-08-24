@@ -8,6 +8,11 @@
     right: 90px;
 }
 
+.red{
+    background-color: #E11900;
+    color: #fff;
+}
+
 h1{
     position: relative;
     right: 23px;
@@ -49,4 +54,10 @@ span{
     position: relative;
     font-size: 18px;
     font-weight: 500;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
