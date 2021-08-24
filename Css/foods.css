@@ -166,6 +166,9 @@ a{
     background-size: contain;
 
 }
+.food__container__price{
+    padding-top: 5px;
+}
 .food__container__CTA:hover{
     background-color: #e11900;
     color: #fff;
@@ -240,7 +243,9 @@ color: #EB2C3C;
     .food__details_desc, .time{
         font-size: 16px;
     }
-}
+    .food__station{
+        font-size: 30px;
+    }
 
 @media screen and (max-width:500px) {
     .food__container{
