@@ -1,3 +1,11 @@
+@keyframes border {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
 @font-face {
     font-family: poppins;
     src: url(../fonts/Poppins-Regular.ttf) format('truetype'),
@@ -11,9 +19,9 @@
 $primary_color : #EB2C3C;
 $secondary_color: #121212;
 body{
-    background-image: url('../img/Group\ 227.png');
+    background-image: url('../img/half-piece\ image.png');
     background-repeat: no-repeat;
-    background-position: -2% 8%;
+    background-position: -1.5% 8%;
     margin: 0px;
     padding: 0px;
     .mobile-app{
@@ -69,7 +77,7 @@ body{
     footer{
         background-image: url('../img/Group\ 13.png');
         background-repeat: no-repeat;
-        background-position: 100% 150%;
+        background-position: 100% 90%;
         padding: 40px 40px 0px;
         .description{
             width: 60%;
@@ -98,6 +106,11 @@ body{
                 text-decoration: none;
                 color: #7C7C7C;
                 font-size: 18px;
+                width: fit-content;
+                &:hover{
+                    border: none;
+                    border-bottom: 2px solid #121212;
+                }
                 }
             }
         }
@@ -105,22 +118,33 @@ body{
             bottom: 0;
             color: #7C7C7C;
             font-size: 14px;
+            margin: 20px 0px 0px;
         }
     }
 }
+
 
 //styling the nav bar
 .nav-bar{
     display: flex;
     align-items: center;
     padding: 0px 40px;
+    i{
+        display: none;
+    }
     &__logo{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         flex: 1;
         font-style: normal;
         font-weight: bold;
         font-size: 24px;
         line-height: 36px;
         color: $primary_color;
+        img{
+            display: none;
+        }
     }
     &__list{
         flex: 1;
@@ -163,7 +187,9 @@ body{
 }
 // styling main
 .food-stations{
-    margin: 55px 40px 0px;
+    background: #e5e5e52c;
+    padding: 5px 40px 0px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     .title{
@@ -195,10 +221,21 @@ body{
             text-decoration: none;
             margin-bottom: 10px;
             padding: 15px;
+            width: 326px;
+            &:hover{
+                border-radius: 8px;
+                animation-name: border;
+                animation-duration: 0.1s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
             &__card{
                 background-size: cover;
+                background-position: center;
+                border-radius: 10px;
                 height: 260px;
-                width: 296px;
+                width: 100%;
+                
                 &--CR{
                     background-image: url('../img/chicken-republic2.png');
                 }
@@ -231,7 +268,7 @@ body{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 296px;
+                width: 100%;
                 p{
                     color: $primary_color;
                     font-weight: bold;
@@ -246,6 +283,102 @@ body{
                         margin-left: 5px;
                     }
                 }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 680px){
+    body{
+        background-size: 20px;
+        background-position: 0% 3%;
+        .nav-bar{
+            text-align: center;
+            padding: 10px 10px;
+            &__logo{
+                justify-content: center;
+                img{
+                    width: 30px;
+                }
+            }
+            &__list{
+                display: none;
+            }
+            i{
+                display: block;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        .food-stations{
+            margin: 20px 0px 0px;
+            .title{
+                text-align: center;
+                h1{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+            &__menu{
+                margin-top: 10px;
+                &__item{
+                    display: block;
+                    text-decoration: none;
+                    &__card{
+                        height: 230px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                    }
+                }
+            }
+        }
+        .mobile-app{
+            flex-direction: column;
+            height: 500px;
+            padding: 20px;
+            &__empty{
+                display: none;
+            }
+            &__content{
+                h3{
+                    width: 100%;
+                    font-size: 22px;
+                }
+                &__app-download{
+                    &__link{
+                        img{
+                            width: 45px;
+                            height: 40px;
+                        }
+                        i{
+                            font-size: 40px;
+                        }
+                        &__text{
+                            p{
+                                font-size: 10px;
+                            }
+                            h6{
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            background-position: -550% 100%;
+            height: auto;
+            .description{
+                width: 100%;
+                height: 90%;
+            }
+            .footer-list{
+                flex-direction: column;
+            }
+            .copyright{
+                bottom: 0;
             }
         }
     }
