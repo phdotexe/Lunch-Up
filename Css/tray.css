@@ -89,6 +89,6 @@ main{
 @media screen and (min-width: 1280px) {
     .container{
         position: relative;
-        left: 850px;
+        left: 750px;
     }
 }

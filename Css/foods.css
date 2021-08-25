@@ -205,7 +205,7 @@ a{
     /* identical to box height */
 
 
-color: #EB2C3C;
+    color: #EB2C3C;
 }
 .food__text{
     display: flex;
@@ -246,6 +246,7 @@ color: #EB2C3C;
     .food__station{
         font-size: 30px;
     }
+}
 
 @media screen and (max-width:500px) {
     .food__container{
