@@ -10,6 +10,104 @@
 //Declaring variables
 $primary_color : #EB2C3C;
 $secondary_color: #121212;
+body{
+    background-image: url('../img/Group\ 227.png');
+    background-repeat: no-repeat;
+    background-position: -2% 8%;
+    margin: 0px;
+    padding: 0px;
+    .mobile-app{
+        display: flex;
+        background: #E11900;
+        background-image: url('../img/order.png');
+        background-repeat: no-repeat;
+        background-position: 80% 120%;
+        background-size: 350px 300px;
+        color: white;
+        padding:60px 60px;
+        &__content{
+            flex: 1;
+            h3{
+                width: 50%;
+                font-size: 25px;
+            }
+            &__app-download{
+                display: flex;
+                &__link{
+                    text-decoration: none;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    background: #000000;
+                    width: fit-content;
+                    height: 48px;
+                    margin-right: 20px;
+                    padding: 0px 15px;
+                    border-radius: 5px;
+                    box-shadow: 2px 2px 2px black;
+                    &__text{
+                        h6{
+                            margin: 0px;
+                            font-size: 15px;
+                        }
+                        p{
+                            margin: 0px;
+                            font-size: 12px;
+                        }
+                    }
+                    i{
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+        &__empty{
+            flex: 1;
+            
+        }
+    }
+    footer{
+        background-image: url('../img/Group\ 13.png');
+        background-repeat: no-repeat;
+        background-position: 100% 150%;
+        padding: 40px 40px 0px;
+        .description{
+            width: 60%;
+            h5{
+                font-size: 36px;
+                margin: 0px;
+                color: $primary_color;
+            }
+            p{
+                color: #BCBCBC;
+                font-size: 20px;
+            }
+        }
+        .footer-list{
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            &__items{
+                display: flex;
+                flex-direction: column;
+                h6{
+                    font-size: 18px;
+                    margin: 0px 0px 10px;
+                }
+                a{
+                text-decoration: none;
+                color: #7C7C7C;
+                font-size: 18px;
+                }
+            }
+        }
+        .copyright{
+            bottom: 0;
+            color: #7C7C7C;
+            font-size: 14px;
+        }
+    }
+}
 
 //styling the nav bar
 .nav-bar{
@@ -66,15 +164,89 @@ $secondary_color: #121212;
 // styling main
 .food-stations{
     margin: 55px 40px 0px;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
-    color: $primary_color;
-    p{
-        color: #C1C1C1;
-        font-weight: normal;
-        span{
-            color: $primary_color;
+    display: flex;
+    flex-direction: column;
+    .title{
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+        color: $primary_color;
+        
+        p{
+            color: #C1C1C1;
+            font-weight: normal;
+            span{
+                color: $primary_color;
+            }
+    }
+    }
+    &__menu{
+        //  display: grid;
+        //  grid-template-columns: 1fr 1fr 1fr;
+        //  column-gap: 13.6%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+         margin-top: 55px;
+        &__item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-decoration: none;
+            margin-bottom: 10px;
+            padding: 15px;
+            &__card{
+                background-size: cover;
+                height: 260px;
+                width: 296px;
+                &--CR{
+                    background-image: url('../img/chicken-republic2.png');
+                }
+                &--cold-stone{
+                    background-image: url('../img/coldstone2.png');
+                }
+                &--marketSquare{
+                    background-image: url('../img/market-square.png');
+                }
+                &--dominos{
+                    background-image: url('../img/dominos2.png');
+                }
+                &--genesis{
+                    background-image: url('../img/genesis.png');
+                }
+                &--kilimanjaro{
+                    background-image: url('../img/kilimanjaro2.png');
+                }
+                &--pizzahut{
+                    background-image: url('../img/pizzahut.png');
+                }
+                &--food-hub{
+                    background-image: url('../img/food-hub.png');
+                }
+                &--pizzamore{
+                    background-image: url('../img/pizzamore-1.png');
+                }
+            }
+            &__text{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 296px;
+                p{
+                    color: $primary_color;
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 36px;
+                }
+                i{
+                    color: #3C3A3A;
+                    font-size: 15px;
+                    span{
+                        color: $primary_color;
+                        margin-left: 5px;
+                    }
+                }
+            }
         }
     }
 }
