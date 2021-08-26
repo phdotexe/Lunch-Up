@@ -20,6 +20,50 @@
   }
 }
 
+@-webkit-keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  from {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+    opacity: 0;
+  }
+}
+
 @font-face {
   font-family: poppins;
   src: url(../fonts/Poppins-Regular.ttf) format("truetype"), url(../fonts/Poppins-Regular.ttf) format("truetype");
@@ -416,6 +460,10 @@ body footer .copyright {
   body .nav-bar {
     text-align: center;
     padding: 10px 10px;
+    position: fixed;
+    top: 0;
+    background: white;
+    width: 90%;
   }
   body .nav-bar__logo {
     -webkit-box-pack: center;
@@ -426,15 +474,58 @@ body footer .copyright {
     width: 30px;
   }
   body .nav-bar__list {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
     display: none;
+    position: fixed;
+    padding: 0px 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 100vh;
+    top: 60px;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #EB2C3C;
+  }
+  body .nav-bar__list__item {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 10px;
+  }
+  body .nav-bar__list__item a {
+    display: block;
+    font-size: 20px;
+    color: white;
+  }
+  body .nav-bar__list__item--active {
+    border: 2px solid white;
   }
   body .nav-bar i {
     display: block;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
   }
   body .food-stations {
-    margin: 20px 0px 0px;
+    margin: 20px git0px 0px;
   }
   body .food-stations .title {
     text-align: center;
