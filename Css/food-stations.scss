@@ -15,17 +15,6 @@
     }
     
 }
-@keyframes slideOut{
-    from{
-        transform: translateY(10px);
-        opacity: 1;
-    }
-    to{
-        transform: translateY(0vh);
-        opacity: 0;
-    }
-    
-}
 @font-face {
     font-family: poppins;
     src: url(../fonts/Poppins-Regular.ttf) format('truetype'),
@@ -162,9 +151,6 @@ body{
         font-size: 24px;
         line-height: 36px;
         color: $primary_color;
-        img{
-            display: none;
-        }
     }
     &__list{
         flex: 1;
@@ -317,12 +303,9 @@ body{
             position: fixed;
             top: 0;
             background: white;
-            width: 90%;
+            width: 100vw;
             &__logo{
-                justify-content: center;
-                img{
-                    width: 30px;
-                }
+                justify-content: left;
             }
             &__list{
                 animation-duration: 0.5s;
@@ -356,10 +339,13 @@ body{
                 }
             }
             i{
+                flex: 1;
+                text-align: right;
                 display: block;
                 font-size: 20px;
                 font-weight: bold;
                 cursor: pointer;
+                margin-right: 20px;
             }
         }
         .food-stations{
