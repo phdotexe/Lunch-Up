@@ -39,7 +39,9 @@ body .mobile-app {
     color: white;
     padding: 60px 60px;
   }
-  
+  #hamburger{
+    display: none;
+  }
   body .mobile-app__content {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -437,6 +439,9 @@ main{
       font-size: 30px;
       width: 100%;
       
+  }
+  #hamburger{
+    display: block;
   }
     .food__time{
       width: 300px;
