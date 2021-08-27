@@ -87,6 +87,12 @@ h1 {
         /* margin: 0; */
         margin: auto;
 }
+input::placeholder{
+    font-size: 16px;
+}
+input{
+    font-size: 16px;
+}
 
 i {
     display: none;
@@ -96,7 +102,9 @@ h5 {
     display: none;
     font-weight: 700;
 }
-
+br{
+    display: none;
+}
 @media screen and (max-width: 768px) {
     *{
         margin: 0;
@@ -133,7 +141,9 @@ h5 {
     .log-in{
         display: block;
     }
-    
+    .log-in__text{
+        flex-direction: column;
+    }
     .log-in__button {
         background-color: #E11900;
         padding: 14px 0px;
@@ -142,7 +152,12 @@ h5 {
         width: 100%;
         border: none;
     }
-
+    #sign{
+        font-size: 16px;
+    }
+    a.log-in__link{
+        font-size: 16px;
+    }
     i {
         display: block;
         color: #E11900;
