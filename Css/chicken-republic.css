@@ -416,9 +416,110 @@ main{
 
     display: inline;
 }
-.naira{
-  font-family: poppins;
+
+.title{
+    font-size: 48px;
+    color: #E11900;
 }
+
+.header-text{
+    justify-content: space-between;
+}
+
+.header-time i, span{
+    font-size: 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+i{
+    color: #E11900;
+}
+
+.header-text h5{
+    font-size: 30px;
+}
+
+.order{
+    font-size: 24px;
+}
+
+img{
+    width: 104px;
+    height: 104px;
+    margin-top: 10px;
+}
+
+.items{
+    justify-content: space-between;
+}
+
+.icon{
+    background: #E11900;
+    width: 25px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon i{
+    color: #fff;
+}
+
+.num{
+    width: 50px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.count{
+    position: relative;
+    top: 30px;
+}
+
+.coke .count{
+    position: relative;
+    left: 45px;
+    bottom: 30px;
+}
+
+.price{
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.trash{
+    position: relative;
+    top: 30px;
+}
+
+.total{
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.btn-order{
+    /* position: relative;
+    right: 360px; */
+    background: #E11900;
+    color: #fff;
+    width: 137px;
+    height: 38px;
+    border-radius: 20px;
+}
+
 
 @media screen  and (max-width: 900px){
     .food__container{
@@ -617,16 +718,39 @@ main{
     .food-bg{
         width: 100%;
     }
-    h2.food__station{
-     
-      font-size: 28px;
-      width: 300px;
-     margin-top: 40px;
-      
-  }
-  /* .nav-bar{
-    display: none;
-  } */
+    .nav-bar{
+        display: none;
+    }
+  
+    .header-text h5{
+        font-size: 20px;
+    }
+
+    .title{
+        font-size: 38px;
+        color: #E11900;
+    }
+
+    .items{
+        flex-direction: column;
+    }
+
+    .trash{
+        position: relative;
+        left: 300px;
+        top: -10px;
+    }
+
+    .coke .count{
+        position: relative;
+        left: 0px;
+        /* bottom: 30px; */
+    }
+    
+    .count{
+        position: relative;
+        top: 10px;
+    }
   
 }
 

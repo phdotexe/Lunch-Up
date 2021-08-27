@@ -8,6 +8,96 @@
     right: 90px;
 }
 
+.img{
+    position: relative;
+    right: 20px;
+}
+
+header{
+    padding-top: 10px;
+}
+.nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 40px;
+  }
+  
+  .nav-bar__logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #EB2C3C;
+  }
+  .food__container{
+      width: 29%;
+     
+  }
+  
+  .nav-bar__list {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  
+  .nav-bar__list__item {
+    padding: 8px 18px;
+  }
+  
+  .nav-bar__list__item a {
+    text-decoration: none;
+    color: #121212;
+  }
+  
+  .nav-bar__list__item a:hover {
+    color: #EB2C3C;
+  }
+  
+  .nav-bar__list__item--active a {
+    color: #EB2C3C;
+  }
+  
+  .nav-bar__list__item--btn {
+    background: #EB2C3C;
+    border: 2px solid #EB2C3C;
+    border-radius: 8px;
+    
+  }
+  
+  .nav-bar__list__item--btn:hover {
+    background: white;
+  }
+  
+  .nav-bar__list__item--btn:hover a {
+    color: #EB2C3C;
+  }
+  
+  .nav-bar__list__item--btn a {
+    color: white;
+  }
+  
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
 .red{
     background-color: #E11900;
     color: #fff;
@@ -76,6 +166,10 @@ main{
         /* left: 25px; */
         /* top: 20px; */
         padding: 10px;
+    }
+
+    nav{
+        display: none;
     }
 }
 

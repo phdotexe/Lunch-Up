@@ -11,32 +11,35 @@
     <title>Tray</title>
 </head>
 <body>
-    <nav class="navbar d-none d-md-flex navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">LunchUp</a>
-            <div class="container ms-5">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="./index.html" class="nav-link p-2 mx-3">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="./about.html" class="nav-link p-2 mx-3">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link p-2 mx-3">Sign out</a>
-                    </li>
-                    <li class="nav-item red">
-                        <a href="#" class="nav-link p-2 mx-3 text-center text-light">Tray</a>
-                    </li>
-                </ul>
+    <header>
+        <nav class="nav-bar d-none d-sm-flex">
+            <div class="nav-bar__logo">
+                LunchUp
             </div>
-        </div>
-    </nav>    
+            <ul class="nav-bar__list">
+                <li class="nav-bar__list__item nav-bar__list__item--active">
+                    <a href="#">Home</a>
+                </li>
+                <li class="nav-bar__list__item">
+                    <a href="#">About</a>
+                </li>
+                <li class="nav-bar__list__item">
+                    <a href="tray.html">Tray</a>
+                </li>
+                <li class="nav-bar__list__item">
+                    <a href="#">Sign in</a>
+                </li>
+                <li class="nav-bar__list__item nav-bar__list__item--btn">
+                    <a href="#">Create account</a>
+                </li>
+            </ul>
+        </nav>
+    </header>    
 
     <main>
         <section class="header d-flex justify-content-center d-sm-none p-4 mt-4">
-            <a href="#"><i class="bx bx-left-arrow-alt"></i></a>
-            <h1>LunchUp</h1>
+            <a href="./food-stations.html"><i class="bx bx-left-arrow-alt"></i></a>
+            <img class="img-fluid img" src="./img/favicon.png" alt="LunchUp">
         </section>
         <section class="empty-section">
             <div class="container-fluid-1 p-4 d-flex flex-column text-secondary">
