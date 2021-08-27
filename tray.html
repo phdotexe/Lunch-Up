@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/tray.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Tray</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar d-none d-sm-flex">
+            <div class="nav-bar__logo">
+                LunchUp
+            </div>
+            <ul class="nav-bar__list">
+                <li class="nav-bar__list__item nav-bar__list__item--active">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="nav-bar__list__item">
+                    <a href="./about.html">About</a>
+                </li>
+                <li class="nav-bar__list__item">
+                    <a href="./tray.html">Tray</a>
+                </li>
+                <li class="nav-bar__list__item">
+                    <a href="./login.html">Sign in</a>
+                </li>
+                <li class="nav-bar__list__item nav-bar__list__item--btn">
+                    <a href="./signup.html">Create account</a>
+                </li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main>
+        <section class="header d-flex justify-content-center d-sm-none p-4 mt-4">
+            <a href="./food-stations.html"><i class="bx bx-left-arrow-alt"></i></a>
+            <img class="img-fluid img" src="./img/favicon.png" alt="LunchUp">
+        </section>
+        <section class="empty-section">
+            <div class="container-fluid-1 p-4 d-flex flex-column text-secondary">
+                <img class="img-fluid" src="./img/no-food-available 2.png" alt="No food available">
+                <p class="h6 mt-4">Sorry, It seems you don’t have any food on your tray</p>
+                <a href="#" class="button btn"><i class="bx bx-plus"></i><span>Create Your Tray</span></a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

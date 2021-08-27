@@ -1,0 +1,200 @@
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Regular.ttf) format("truetype"), url(../fonts/Poppins-Regular.ttf) format("truetype");
+}
+  
+*{
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.log-in {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+.log-in__image {
+    /*background-image: url(../img/giant-burger.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    flex:1;
+    width: 50%;
+    height: 98%;
+    text-align: right;
+}
+
+.log-in__form {
+    flex:1;
+    width: fit-content;
+    text-align: center;
+    padding: 3rem 0rem;
+}
+
+#burger {
+    width: 95%;
+    height: 90%;
+    padding: 1.5rem 0rem;
+}
+
+input {
+    width: 450px;
+    height: 45px;
+    border-radius: 14px;
+    border-color: grey;
+    border-style: solid;
+    outline: none;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: #E11900;
+    font-weight: 1000;
+    margin-bottom: 2rem;
+}
+
+.log-in__button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #E11900;
+    padding: 14px 0px;
+    border-radius: 14px;
+    color: white;
+    width: 467px;
+    border: none;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.log-in__link {
+    text-decoration: none;
+    color: #E11900;
+}
+
+.log-in__text {
+    font-size: small;
+        padding: 0px;
+        display: flex;
+        justify-content: space-between;
+        width: 450px;
+        /* margin: 0; */
+        margin: auto;
+}
+input::placeholder{
+    font-size: 16px;
+}
+input{
+    font-size: 16px;
+}
+
+i {
+    display: none;
+}
+
+h5 {
+    display: none;
+    font-weight: 700;
+}
+br{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .logo{
+        margin-bottom: 2.4rem;
+    }
+    body {
+        padding: 0rem 1rem;
+    }
+
+    .log-in__image {
+        display: none;
+    }
+    form{
+        padding-top: 1.2rem;
+    }
+
+    .log-in__form {
+        width: 100%;
+        text-align: center;
+        padding-top: srem;
+    }
+
+    input {
+        width: 85vw;
+        height: 45px;
+        border-radius: 14px;
+        border-color: grey;
+        border-style: solid;
+        padding-left: 1rem;
+    }
+    .log-in{
+        display: block;
+    }
+    .log-in__text{
+        flex-direction: column;
+    }
+    .log-in__button {
+        background-color: #E11900;
+        padding: 14px 0px;
+        border-radius: 14px;
+        color: white;
+        width: 100%;
+        border: none;
+    }
+    #sign{
+        font-size: 16px;
+    }
+    a.log-in__link{
+        font-size: 16px;
+    }
+    i {
+        display: block;
+        color: #E11900;
+        font-size: 30px;
+        float: left;
+        /* margin-bottom: 1rem; */
+    }
+    #pwd{
+        margin-bottom: 2rem;
+    }
+
+    .h5{
+        display: block;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: left;
+        margin-bottom: 1rem;
+        color: #E11900;
+    }
+
+    h1{
+        display: none;
+    }
+    
+
+    .log-in__text {
+        font-size: small;
+        text-align: left;
+        width: 100%;
+        padding: 0;
+    }
+
+    #sign {
+        margin-bottom: 16px;
+    }
+}
+
+
+
