@@ -87,6 +87,12 @@ h1 {
         /* margin: 0; */
         margin: auto;
 }
+input::placeholder{
+    font-size: 16px;
+}
+input{
+    font-size: 16px;
+}
 
 i {
     display: none;
@@ -96,13 +102,17 @@ h5 {
     display: none;
     font-weight: 700;
 }
-
+br{
+    display: none;
+}
 @media screen and (max-width: 768px) {
     *{
         margin: 0;
         padding: 0;
     }
-
+    .logo{
+        margin-bottom: 2.4rem;
+    }
     body {
         padding: 0rem 1rem;
     }
@@ -110,52 +120,69 @@ h5 {
     .log-in__image {
         display: none;
     }
+    form{
+        padding-top: 1.2rem;
+    }
 
     .log-in__form {
         width: 100%;
         text-align: center;
-        padding-top: 2rem;
+        padding-top: srem;
     }
 
     input {
-        width: 83vw;
+        width: 85vw;
         height: 45px;
         border-radius: 14px;
         border-color: grey;
         border-style: solid;
         padding-left: 1rem;
     }
-    
+    .log-in{
+        display: block;
+    }
+    .log-in__text{
+        flex-direction: column;
+    }
     .log-in__button {
         background-color: #E11900;
         padding: 14px 0px;
         border-radius: 14px;
         color: white;
-        width: 85.5vw;
+        width: 100%;
         border: none;
     }
-
+    #sign{
+        font-size: 16px;
+    }
+    a.log-in__link{
+        font-size: 16px;
+    }
     i {
         display: block;
         color: #E11900;
         font-size: 30px;
         float: left;
-        margin-bottom: 1rem;
+        /* margin-bottom: 1rem; */
+    }
+    #pwd{
+        margin-bottom: 2rem;
     }
 
     .h5{
         display: block;
-        /*float: left;*/
         font-size: 24px;
         font-weight: 700;
         line-height: 28px;
         text-align: left;
         margin-bottom: 1rem;
+        color: #E11900;
     }
 
-    h1 {
+    h1{
         display: none;
     }
+    
 
     .log-in__text {
         font-size: small;
