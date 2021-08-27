@@ -233,6 +233,111 @@ a{
 
     display: inline;
 }
+
+.title{
+    font-size: 48px;
+    color: #E11900;
+}
+
+.header-text{
+    justify-content: space-between;
+}
+
+.header-time i, span{
+    font-size: 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+i{
+    color: #E11900;
+}
+
+.header-text h5{
+    font-size: 30px;
+}
+
+.order{
+    font-size: 24px;
+}
+
+img{
+    width: 104px;
+    height: 104px;
+    margin-top: 10px;
+}
+
+.items{
+    justify-content: space-between;
+}
+
+.icon{
+    background: #E11900;
+    width: 25px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon i{
+    color: #fff;
+}
+
+.num{
+    width: 50px;
+    height: 20px;
+    border: 1px solid #000;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.count{
+    position: relative;
+    top: 30px;
+}
+
+.coke .count{
+    position: relative;
+    left: 53px;
+    bottom: 30px;
+}
+
+.price{
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.trash{
+    position: relative;
+    top: 30px;
+}
+
+.total{
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.btn-order{
+    /* position: relative;
+    right: 360px; */
+    background: #E11900;
+    color: #fff;
+    width: 137px;
+    height: 38px;
+    border-radius: 20px;
+}
+
+
 @media screen  and (max-width: 900px){
     .food__container{
         width:45%
