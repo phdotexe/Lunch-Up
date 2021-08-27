@@ -371,6 +371,35 @@ img{
         display: none;
     }
   
+    .header-text h5{
+        font-size: 20px;
+    }
+
+    .title{
+        font-size: 38px;
+        color: #E11900;
+    }
+
+    .items{
+        flex-direction: column;
+    }
+
+    .trash{
+        position: relative;
+        left: 300px;
+        top: -10px;
+    }
+
+    .coke .count{
+        position: relative;
+        left: 0px;
+        /* bottom: 30px; */
+    }
+    
+    .count{
+        position: relative;
+        top: 10px;
+    }
   
 }
 
