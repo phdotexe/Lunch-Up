@@ -12,15 +12,14 @@
 <body>
     <nav class="nav-bar">
         <div class="nav-bar__logo">
-            <img src="./img/favicon.png" alt="logo">
             LunchUp
         </div>
         <ul class="nav-bar__list">
-            <li class="nav-bar__list__item nav-bar__list__item--active">
-                <a href="#">Home</a>
+            <li class="nav-bar__list__item">
+                <a href="./index.html">Home</a>
             </li>
             <li class="nav-bar__list__item">
-                <a href="#">About</a>
+                <a href="./about.html">About</a>
             </li>
             <li class="nav-bar__list__item">
                 <a href="tray.html">Tray</a>
@@ -32,7 +31,7 @@
                 <a href="#">Create account</a>
             </li>
         </ul>
-        <i class="ri-menu-line"></i>
+        <i class="ri-menu-line" id="hamburger" click="myFunction()"></i>
     </nav>
    
     <main class="food-stations">
@@ -186,5 +185,6 @@
         </div>
         <h6 class="copyright">©2020 LunchUp</h6>
     </footer>
+    <script src="./nav.js"></script>
 </body>
 </html>
