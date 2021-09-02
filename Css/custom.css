@@ -22,9 +22,7 @@ body{
     background-image: none;
 }
 
-#hamburger{
-    display: none;
-}
+
 
 .hero-section{
     height: 100vh;
@@ -190,11 +188,14 @@ h4{
       .hero-section{
           height: fit-content;
       }
-      #hamburger {
+      .nav-bar #hamburger {
         display: block;
-        font-size: 20px;
-        font-weight: bold;
-      }
+        color: #EB2C3C;
+        font-size: 30px;
+    }
+    body .nav-bar i {
+        margin-right: 0px;
+    }
       .section-3__img{
           flex-direction: column;
       }
