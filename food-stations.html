@@ -11,8 +11,8 @@
 </head>
 <body>
     <nav class="nav-bar">
-        <div class="nav-bar__logo">
-            LunchUp
+        <div class="nav-bar__logo logged-in">
+            <a href="./index.html">LunchUp</a>
         </div>
         <ul class="nav-bar__list">
             <li class="nav-bar__list__item">
@@ -25,15 +25,21 @@
                 <a href="./tray.html">Tray</a>
             </li>
             <li class="nav-bar__list__item">
-                <a href="./login.html">Sign in</a>
+                <a href="#"><i class="ri-user-3-line"></i></a>
             </li>
-            <li class="nav-bar__list__item nav-bar__list__item--btn">
+            <!-- <li class="nav-bar__list__item nav-bar__list__item--btn">
                 <a href="./signup.html">Create account</a>
-            </li>
+            </li> -->
         </ul>
         <i class="ri-menu-line" id="hamburger" click="myFunction()"></i>
     </nav>
-   
+    <div class="search-box">
+        <div class="search-box__item">
+            <label for="search"><i class="ri-search-line"></i></label>
+            <input type="search" id="search" placeholder="Search for your favourite food station">
+        </div>
+        <button type="submit" class="search-box__btn">Search</button>
+    </div>
     <main class="food-stations">
         <div class="title">
             <h1>
@@ -163,24 +169,12 @@
             </p>
         </div>
         <div class="footer-list">
+            <h6>Socials</h6>
             <div class="footer-list__items">
-                <h6>Company</h6>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">Brand assets</a>
-            </div>
-            <div class="footer-list__items">
-                <h6>Services</h6>
-                <a href="#">Restaurants Us</a>
-                <a href="#">Delivery</a>
-                <a href="#">Payments assets</a>
-            </div>
-            <div class="footer-list__items">
-                <h6>Socials</h6>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">Linkedin</a>
+                <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-linkedin-box-fill"></i></a>
             </div>
         </div>
         <h6 class="copyright">©2020 LunchUp</h6>
