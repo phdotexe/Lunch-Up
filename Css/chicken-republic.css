@@ -14,6 +14,9 @@ body{
     opacity: 1;
   }
 }
+#hamburger{
+  display: none;
+}
 
 @keyframes slideIn {
   from {
@@ -39,7 +42,9 @@ body .mobile-app {
     color: white;
     padding: 60px 60px;
   }
-  
+  #hamburger{
+    display: none;
+  }
   body .mobile-app__content {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -99,64 +104,7 @@ body .mobile-app {
             flex: 1;
   }
   
-  body footer {
-    background-image: url("../img/Group 13.png");
-    background-repeat: no-repeat;
-    background-position: 100% 150%;
-    padding: 40px 40px 0px;
-  }
-  
-  body footer .description {
-    width: 60%;
-  }
-  
-  body footer .description h5 {
-    font-size: 36px;
-    margin: 0px;
-    color: #EB2C3C;
-  }
-  
-  body footer .description p {
-    color: #BCBCBC;
-    font-size: 20px;
-  }
-  
-  body footer .footer-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 60%;
-  }
-  
-  body footer .footer-list__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  
-  body footer .footer-list__items h6 {
-    font-size: 18px;
-    margin: 0px 0px 10px;
-  }
-  
-  body footer .footer-list__items a {
-    text-decoration: none;
-    color: #7C7C7C;
-    font-size: 18px;
-  }
-  
-  body footer .copyright {
-    bottom: 0;
-    color: #7C7C7C;
-    font-size: 14px;
-  }
+ 
   
 .nav-bar {
     display: -webkit-box;
@@ -244,11 +192,7 @@ a{
     color: #121212;
     font-size: 18px;
 }
-main{
-    margin: 0;
-    overflow-x: hidden;
-  
-}
+
 .food__container{
     display: flex;
     flex-direction: column;
@@ -341,6 +285,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 55px 0px 0px;
+    padding: 0px 40px;
 }
 .food__container__label{
     padding:10px auto;
@@ -361,17 +306,24 @@ main{
     margin-right: 40px;
     margin-top: 50px;
 } 
- .number{
+ .cart-number{
+   display: flex;
+   align-items: center;
+   justify-content: center;
     position: relative;
     color: white;
+    background-color: #EB2C3C;
     top: 6px;
-    left: 6px;
-    height: 30px;
-    width: 30px;
+    left: 90%;
+    height: 50px;
+    width: 50px;
+    padding: 20px 10px 10px;
     border-radius: 50%;
     font-family: bold;
-    text-align: center;
   font-family: poppins;
+}
+#number{
+  margin-bottom: 20px;
 }
 .cart{
   position: absolute;
@@ -393,6 +345,7 @@ main{
 .food__text{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .food__details_desc, .time{
     font-family: Poppins;
@@ -426,13 +379,13 @@ main{
 
 .header-time i, span{
     font-size: 10px;
-    position: relative;
+    /* position: relative; */
     bottom: 5px;
 }
 
-i{
+/* i{
     color: #E11900;
-}
+} */
 
 .header-text h5{
     font-size: 30px;
@@ -520,6 +473,14 @@ img{
 
 
 @media screen  and (max-width: 900px){
+  .cart-number{
+    top: -10px;
+    left: 80%;
+    z-index: -10;
+  }
+  .container-fluid{
+    padding: 8px 20px;
+  }
     .food__container{
         width:48%
     }
@@ -539,6 +500,9 @@ img{
       width: 100%;
       
   }
+  #hamburger{
+    display: block;
+  }
     .food__time{
       width: 300px;
     }
@@ -550,7 +514,8 @@ img{
     .food_item{
       width: 40px;
       height: 40px;
-      
+      z-index: -2;
+      margin-top: 70px;
     }
     .number{
      
@@ -655,7 +620,7 @@ img{
     .small-piece{
       height: 70px;
     }
-  body footer {
+  /* body footer {
     background-position: -550% 100%;
     height: auto;
   }
@@ -671,7 +636,7 @@ img{
   }
   body footer .copyright {
     bottom: 0;
-  }
+  } */
   
   body .mobile-app {
     -webkit-box-orient: vertical;
@@ -705,6 +670,12 @@ img{
 }
 
 @media screen and (max-width:500px) {
+  h2.food__station{
+    text-align: center;
+  }
+  .food__details_desc{
+    text-align: center;
+  }
     .food__container{
         width: 100%;
        
