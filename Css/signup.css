@@ -146,3 +146,14 @@ h1 {
     background: #000 url(../img/circle-loader-gif-2.gif) no-repeat center center;
     background-size: 15%;
 }
+
+
+#backupPhone::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#phone::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
