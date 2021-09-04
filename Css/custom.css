@@ -46,6 +46,7 @@ h1{
     height: 368px;
     margin: 0px;
     display: flex;
+    z-index: -2;
     margin-top: 10px;
     justify-content: space-between;
 }
@@ -58,6 +59,7 @@ h1{
 	-webkit-background-size: 50%;
     background-size: 90% 339px;
     background-position: -100% 0%;
+    z-index: -2;
 }
 .box-img2{
     background-image: url("../img/burger\ and\ chips.png");
@@ -68,6 +70,7 @@ h1{
 	-webkit-background-size: 50%;
     background-size: 90% 350px;
     background-position: 100% 9%;
+    z-index: -2;
 }
 
 .section-2{

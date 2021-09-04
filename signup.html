@@ -14,7 +14,7 @@
     <div class="sign-up">
 
         <div class="sign-up__image">
-            <img id="burger" src="./img/giant-burger.png" alt="Big Burger">
+            
         </div>
 
         <div class="sign-up__form">
@@ -24,22 +24,27 @@
 
             <form>
                 
-                <input type="text" id="fname" name="fname" placeholder="Name">
+                <input type="text" id="fname" name="fname" placeholder="Name" required>
             
-                <input type="text" id="lname" name="lname" placeholder="Phone Number">
+                <input type="number" id="phone" name="phone" placeholder="Phone Number" required>
 
-                <input type="text" id="pwd" name="pwd" placeholder="Backup Phone number">
+                <input type="number" id="backupPhone" name="backup phone" placeholder="Backup Phone number" required>
 
-                <input type="text" id="scw" name="scw" placeholder="Secret Question">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+
+                <select name="secret-question" id="sQuestion">
+                    <option value="1">Select a secret question</option>
+                    <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+                </select>
 
 
-                <input type="text" id="answer" name="answer" placeholder="Answer">
+                <input type="text" id="sAnswer" name="answer" placeholder="Answer" required>
 
-                <a href="./food-stations.html" class="sign-up__button">Sign Up</a>
+                <input type="submit" id="signUpBtn" class="sign-up__button" value="Sign Up">
 
                 <div class="sign-up__text">
                     <div id="log">Already have an account? <a class="sign-up__link" href="./login.html">Log in</a></div>
-                    <div id="skip"><a class="sign-up__link" href="./food-stations.html">Skip for now</a></div>
+                    <!-- <div id="skip"><a class="sign-up__link" href="./food-stations.html">Skip for now</a></div> -->
                 </div>
 
             </form>
@@ -53,6 +58,6 @@
 
 
 
-    
+<script src="./signUp.js"></script>    
 </body>
 </html>

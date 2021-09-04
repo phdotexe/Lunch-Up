@@ -314,22 +314,52 @@ body footer .copyright {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
   line-height: 27px;
 }
 
+.nav-bar__list .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px;
+}
+
+.nav-bar__list .user h5 {
+  margin: 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .nav-bar__list__item {
-  padding: 8px 18px;
+  padding: 8px 18px 0px;
 }
 
 .nav-bar__list__item a {
+  text-align: center;
   text-decoration: none;
   color: #121212;
 }
 
 .nav-bar__list__item a .ri-user-3-line {
   background: #EB2C3C;
-  padding: 10px;
+  padding: 5px;
   border-radius: 50%;
   color: white;
 }
@@ -346,6 +376,7 @@ body footer .copyright {
   background: #EB2C3C;
   border: 2px solid #EB2C3C;
   border-radius: 8px;
+  padding: 8px 18px;
 }
 
 .nav-bar__list__item--btn:hover {
@@ -358,6 +389,12 @@ body footer .copyright {
 
 .nav-bar__list__item--btn a {
   color: white;
+}
+
+.nav-bar .profile {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .nav-bar .logged-in {
@@ -576,7 +613,7 @@ body footer .copyright {
   body .nav-bar__list__item--active {
     border: 2px solid white;
   }
-  body .nav-bar i {
+  body .nav-bar #hamburger {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -594,13 +631,15 @@ body footer .copyright {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
+    text-align: center;
+    width: 100vw;
   }
   body .search-box__item {
     width: 80%;
   }
   body .search-box__item #search {
-    font-size: 70%;
+    font-size: 80%;
+    font-weight: bold;
   }
   body .search-box__btn {
     margin: 10px 0px;

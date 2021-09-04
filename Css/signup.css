@@ -11,44 +11,41 @@
 
 .sign-up {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     align-items: center;
     overflow: hidden;
 }
 
 .sign-up__image {
-    /*background-image: url(../img/giant-burger.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
-    width: 50%;
-    height: 98%;
-    text-align: right;
+   background: url('../img/giant-burger.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   width: 50vw;
 }
 
 .sign-up__form {
-    width: 50%;
+    width: 50vw;
     text-align: center;
     padding: 1rem 0rem;
 }
 
-#burger {
-    width: 95%;
-    height: 90%;
-    padding: 1.5rem 0rem;
-}
 
-
-input {
-    width: 450px;
-    height: 45px;
+input, select {
+    width: 80%;
+    height: 100%;
     border-radius: 14px;
     border-color: grey;
     border-style: solid;
     outline: none;
-    padding-left: 1rem;
+    padding: 2%;
     margin-bottom: 1rem; 
+}
+select{
+    width: 85%;
+    border-width: 2px;
 }
 
 h1 {
@@ -64,7 +61,7 @@ h1 {
     padding: 14px 0px;
     border-radius: 14px;
     color: white;
-    width: 467px;
+    width: 85%;
     border: none;
     margin-bottom: 1rem;
     cursor: pointer;
@@ -77,12 +74,9 @@ h1 {
 
 .sign-up__text {
     font-size: small;
-    padding: 0px;
-    display: flex;
-    justify-content: space-between;
-    width: 450px;
-    /* margin: 0; */
+    width: 80%;
     margin: auto;
+    text-align: left;
 }
 
 
@@ -98,7 +92,7 @@ h1 {
     }
 
     body {
-        padding: 0rem 1rem;
+        padding: 0;
     }
 
     .sign-up__image {
@@ -106,32 +100,27 @@ h1 {
     }
 
     .sign-up__form {
-        width: 100%;
+        width: 100vw;
         text-align: center;
-        padding-top: 1rem;
     }
 
-    input {
-        width: 83vw;
-        height: 45px;
+    input, select {
+        width: 80vw;
         border-radius: 14px;
         border-color: grey;
         border-style: solid;
-        padding-left: 1rem;
+        padding: 7px 10px;
     }
 
-    #security {
-        width: 89vw;
-        height: 48px;
-        border-radius: 14px;
-        border-color: grey;
-        border-style: solid;
-        padding-left: 1rem;
+    select{
+        width: 88vw;
     }
+
+
     
     .sign-up__button {
         background-color: #E11900;
-        padding: 14px 0px;
+        padding: 10px;
         border-radius: 14px;
         color: white;
         width: 85.5vw;
@@ -145,20 +134,7 @@ h1 {
         float: left;
     }
 
-    .sign-up__text {
-        font-size: small;
-        padding: 0px;
-        display: flex;
-        justify-content: space-between;
-        width: 450px;
-        /* margin: 0; */
-        margin: auto;
-    }
-    
-
-    #skip {
-        display: none;
-    }
+ 
 }
 
     

@@ -13,45 +13,38 @@
 
 .log-in {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     align-items: center;
     overflow: hidden;
 }
 
 .log-in__image {
-    /*background-image: url(../img/giant-burger.png);
-    background-position: center;
+    background: url('../img/giant-burger.png');
+    background-repeat: no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;*/
-    flex:1;
-    width: 50%;
-    height: 98%;
-    text-align: right;
+    background-position: center;
+    height: 100vh;
+    width: 50vw;
 }
 
 .log-in__form {
-    flex:1;
-    width: fit-content;
+    width: 50vw;
     text-align: center;
-    padding: 3rem 0rem;
+    padding: 1rem 0rem;
 }
 
-#burger {
-    width: 95%;
-    height: 90%;
-    padding: 1.5rem 0rem;
-}
+
 
 input {
-    width: 450px;
-    height: 45px;
+    width: 80%;
+    height: 100%;
     border-radius: 14px;
     border-color: grey;
     border-style: solid;
     outline: none;
-    padding-left: 1rem;
-    margin-bottom: 1rem;
+    padding: 2%;
+    margin-bottom: 1rem; 
 }
 
 h1 {
@@ -67,7 +60,7 @@ h1 {
     padding: 14px 0px;
     border-radius: 14px;
     color: white;
-    width: 467px;
+    width: 85%;
     border: none;
     margin-bottom: 1rem;
     cursor: pointer;
