@@ -217,6 +217,7 @@ b{
     }
 
     .main-container__left--details{
+        padding-left:10px ;
         justify-content: space-between;
     }
 
