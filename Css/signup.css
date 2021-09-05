@@ -11,44 +11,54 @@
 
 .sign-up {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     align-items: center;
     overflow: hidden;
 }
 
 .sign-up__image {
-    /*background-image: url(../img/giant-burger.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;*/
-    width: 50%;
-    height: 98%;
-    text-align: right;
+   background: url('../img/giant-burger.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+   width: 50vw;
+}
+
+.sign-up__image a{
+    display: inline-block;
+    background-color: #E11900;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    height: fit-content;
+    width: fit-content;
+    margin: 20px;
+    border-radius: 8px;
 }
 
 .sign-up__form {
-    width: 50%;
+    width: 50vw;
     text-align: center;
     padding: 1rem 0rem;
 }
 
-#burger {
-    width: 95%;
-    height: 90%;
-    padding: 1.5rem 0rem;
-}
 
-
-input {
-    width: 450px;
-    height: 45px;
+input, select {
+    width: 80%;
+    height: 100%;
     border-radius: 14px;
     border-color: grey;
     border-style: solid;
     outline: none;
-    padding-left: 1rem;
+    padding: 2%;
     margin-bottom: 1rem; 
+}
+select{
+    width: 85%;
+    border-width: 2px;
 }
 
 h1 {
@@ -64,7 +74,7 @@ h1 {
     padding: 14px 0px;
     border-radius: 14px;
     color: white;
-    width: 467px;
+    width: 85%;
     border: none;
     margin-bottom: 1rem;
     cursor: pointer;
@@ -80,8 +90,7 @@ h1 {
     padding: 0px;
     display: flex;
     justify-content: space-between;
-    width: 450px;
-    /* margin: 0; */
+    width: 85%;
     margin: auto;
 }
 
@@ -90,6 +99,24 @@ h1 {
     text-align: right;
 }
 
+input::placeholder{
+    font-size: 16px;
+}
+input{
+    font-size: 16px;
+}
+
+i {
+    display: none;
+}
+
+h5 {
+    display: none;
+    font-weight: 700;
+}
+br{
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
     *{
@@ -98,67 +125,92 @@ h1 {
     }
 
     body {
-        padding: 0rem 1rem;
+        padding: 0;
     }
 
     .sign-up__image {
         display: none;
     }
 
+    .sign-up{
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .go-back{
+        display: block;
+        font-size: 100px;
+        height: 10vh;
+        width: 100vw;
+    }
+
+    .go-back a{
+        text-decoration: none;
+        color: #E11900;
+    }
+
+    .go-back a i{
+        display: block;
+        font-size: 40%;
+        padding: 10px;
+    }
+
     .sign-up__form {
-        width: 100%;
-        text-align: center;
-        padding-top: 1rem;
+        width: 100vw;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    input {
-        width: 83vw;
-        height: 45px;
+    .sign-up__form input, select {
+        width: 80vw;
+        height: fit-content;
         border-radius: 14px;
         border-color: grey;
         border-style: solid;
-        padding-left: 1rem;
+        padding: 7px 10px;
     }
 
-    #security {
-        width: 89vw;
-        height: 48px;
-        border-radius: 14px;
-        border-color: grey;
-        border-style: solid;
-        padding-left: 1rem;
+    select{
+        width: 88vw;
+        padding: 10px;
     }
-    
-    .sign-up__button {
-        background-color: #E11900;
-        padding: 14px 0px;
-        border-radius: 14px;
-        color: white;
+
+    .sign-up__text{
+        padding: 10px;
         width: 85.5vw;
         border: none;
     }
 
-    i {
-        display: inherit;
-        color: #E11900;
-        font-size: 30px;
-        float: left;
+    #signUpBtn{
+        width: 88vw;
+        border: none;
     }
 
-    .sign-up__text {
-        font-size: small;
-        padding: 0px;
-        display: flex;
-        justify-content: space-between;
-        width: 450px;
-        /* margin: 0; */
-        margin: auto;
-    }
-    
-
-    #skip {
-        display: none;
-    }
+ 
 }
 
     
+#preloader{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: #000 url(../img/circle-loader-gif-2.gif) no-repeat center center;
+    background-size: 15%;
+}
+
+
+#backupPhone::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#phone::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

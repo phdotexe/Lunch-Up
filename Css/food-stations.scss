@@ -214,16 +214,31 @@ body{
         display: flex;
         list-style: none;
         justify-content: space-between;
+        align-items: center;
         font-size: 18px;
         line-height: 27px;
+        .user{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            padding: 0px;
+            h5{
+                margin: 0px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
         &__item{
-            padding: 8px 18px;
+            padding: 8px 18px 0px;
             a{
+                text-align: center;
                 text-decoration: none;
                 color: $secondary_color;
                 .ri-user-3-line{
                     background: $primary_color;
-                    padding: 10px;
+                    padding: 5px;
                     border-radius: 50%;
                     color: white;
                 }
@@ -240,6 +255,7 @@ body{
                 background: $primary_color;
                 border: 2px solid $primary_color;
                 border-radius: 8px;
+                padding: 8px 18px;
                 &:hover{
                     background: white;
                     a{
@@ -252,6 +268,9 @@ body{
             }
         }
 
+    }
+    .profile{
+        align-items: flex-end;
     }
     .logged-in{
         flex: 2;
@@ -407,7 +426,8 @@ body{
                    }
                 }
             }
-            i{
+
+            #hamburger{
                 flex: 1;
                 text-align: right;
                 display: block;
@@ -416,16 +436,22 @@ body{
                 cursor: pointer;
                 margin-right: 20px;
             }
+            .profile{
+                align-items: center;
+            }
         }
+
         .search-box{
             margin-top: 80px;
             margin-bottom: 20px;
             flex-direction: column;
-            width: 100%;
+            text-align: center;
+            width: 100vw;
             &__item{
                 width: 80%;
                 #search{
-                    font-size: 70%;
+                    font-size: 80%;
+                    font-weight: bold;
                 }
             }
             &__btn{
