@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <title>Lunchup</title>
     <link rel="stylesheet" href="./Css/signup.css">
     
@@ -15,8 +16,12 @@
 
     <div class="sign-up">
 
+        <div class="go-back">
+            <a href="./index.html"><i class="ri-arrow-left-line"></i></a>
+        </div>
+
         <div class="sign-up__image">
-            
+            <a href="./index.html">Go back home</a>
         </div>
 
         <div class="sign-up__form">
@@ -34,8 +39,8 @@
 
                 <input type="password" name="password" id="password" placeholder="Password" required>
 
-                <select name="secret-question" id="sQuestion">
-                    <option value="1">Select a secret question</option>
+                <select required name="secret-question" id="sQuestion">
+                    <option label="Select a secret question" value=""></option>
                     <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
                     <option value="What is your Pet's name">What is your Pet's name?</option>
                     <option value="What is your Middle name?">What is your Middle name?</option>

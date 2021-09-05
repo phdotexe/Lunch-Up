@@ -28,6 +28,19 @@
     width: 50vw;
 }
 
+.log-in__image a{
+    display: inline-block;
+    background-color: #E11900;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    height: fit-content;
+    width: fit-content;
+    margin: 20px;
+    border-radius: 8px;
+}
+
 .log-in__form {
     width: 50vw;
     text-align: center;
@@ -73,12 +86,11 @@ h1 {
 
 .log-in__text {
     font-size: small;
-        padding: 0px;
-        display: flex;
-        justify-content: space-between;
-        width: 450px;
-        /* margin: 0; */
-        margin: auto;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
 }
 input::placeholder{
     font-size: 16px;
@@ -103,93 +115,64 @@ br{
         margin: 0;
         padding: 0;
     }
-    .logo{
-        margin-bottom: 2.4rem;
-    }
-    body {
-        padding: 0rem 1rem;
-    }
-
-    .log-in__image {
+    
+    .log-in__image{
         display: none;
     }
-    form{
-        padding-top: 1.2rem;
+
+    .log-in{
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    .log-in__form {
-        width: 100%;
-        text-align: center;
-        padding-top: srem;
+    .go-back{
+        display: block;
+        font-size: 100px;
+        height: 10vh;
+        width: 100vw;
     }
 
-    input {
-        width: 85vw;
-        height: 45px;
+    .go-back a{
+        text-decoration: none;
+        color: #E11900;
+    }
+
+    .go-back a i{
+        display: block;
+        font-size: 40%;
+        padding: 10px;
+    }
+
+    .log-in__form{
+        width: 100vw;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input, select {
+        width: 80vw;
+        height: fit-content;
         border-radius: 14px;
         border-color: grey;
         border-style: solid;
-        padding-left: 1rem;
+        padding: 7px 10px;
     }
-    .log-in{
-        display: block;
+
+    select{
+        width: 84vw;
     }
+
     .log-in__text{
-        flex-direction: column;
-    }
-    .log-in__button {
-        background-color: #E11900;
-        padding: 14px 0px;
-        border-radius: 14px;
-        color: white;
-        width: 100%;
+        padding: 10px;
+        width: 85.5vw;
         border: none;
     }
-    #sign{
-        font-size: 16px;
-    }
-    a.log-in__link{
-        font-size: 16px;
-    }
-    i {
-        display: block;
-        color: #E11900;
-        font-size: 30px;
-        float: left;
-        /* margin-bottom: 1rem; */
-    }
-    #pwd{
-        margin-bottom: 2rem;
-    }
-
-    .h5{
-        display: block;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 28px;
-        text-align: left;
-        margin-bottom: 1rem;
-        color: #E11900;
-    }
-
-    h1{
-        display: none;
-    }
-    
-
-    .log-in__text {
-        font-size: small;
-        text-align: left;
-        width: 100%;
-        padding: 0;
-    }
-
-    #sign {
-        margin-bottom: 16px;
-    }
 }
-
-
 
 #phone_::-webkit-inner-spin-button {
     -webkit-appearance: none;

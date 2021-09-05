@@ -26,6 +26,19 @@
    width: 50vw;
 }
 
+.sign-up__image a{
+    display: inline-block;
+    background-color: #E11900;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    height: fit-content;
+    width: fit-content;
+    margin: 20px;
+    border-radius: 8px;
+}
+
 .sign-up__form {
     width: 50vw;
     text-align: center;
@@ -74,9 +87,11 @@ h1 {
 
 .sign-up__text {
     font-size: small;
-    width: 80%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
     margin: auto;
-    text-align: left;
 }
 
 
@@ -84,6 +99,24 @@ h1 {
     text-align: right;
 }
 
+input::placeholder{
+    font-size: 16px;
+}
+input{
+    font-size: 16px;
+}
+
+i {
+    display: none;
+}
+
+h5 {
+    display: none;
+    font-weight: 700;
+}
+br{
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
     *{
@@ -99,13 +132,43 @@ h1 {
         display: none;
     }
 
-    .sign-up__form {
+    .sign-up{
         width: 100vw;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
-    input, select {
+    .go-back{
+        display: block;
+        font-size: 100px;
+        height: 10vh;
+        width: 100vw;
+    }
+
+    .go-back a{
+        text-decoration: none;
+        color: #E11900;
+    }
+
+    .go-back a i{
+        display: block;
+        font-size: 40%;
+        padding: 10px;
+    }
+
+    .sign-up__form {
+        width: 100vw;
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign-up__form input, select {
         width: 80vw;
+        height: fit-content;
         border-radius: 14px;
         border-color: grey;
         border-style: solid;
@@ -114,23 +177,18 @@ h1 {
 
     select{
         width: 88vw;
-        
+        padding: 10px;
     }
 
-    .sign-up__button {
-        background-color: #E11900;
+    .sign-up__text{
         padding: 10px;
-        border-radius: 14px;
-        color: white;
         width: 85.5vw;
         border: none;
     }
 
-    i {
-        display: inherit;
-        color: #E11900;
-        font-size: 30px;
-        float: left;
+    #signUpBtn{
+        width: 88vw;
+        border: none;
     }
 
  
