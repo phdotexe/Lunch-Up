@@ -52,8 +52,8 @@
     <main>
         <!-- <img src="./img/half-piece image.png" class = 'small-piece' alt="small-piece image"> -->
             <div class="cart-number">
-              <i class="ri-shopping-cart-fill"></i>
-              <div id = 'number' class="number" data-bs-toggle="modal" data-bs-target="#foodmodal">0</div>
+              <i class="ri-shopping-cart-fill" data-bs-toggle="modal" data-bs-target="#foodmodal"></i>
+              <div id = 'number' class="number">0</div>
             </div>
             <div class="modal fade" id="foodmodal" tabindex="-1" aria-labelledby="foodmodalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -273,7 +273,7 @@
       <h6 class="copyright">©2020 LunchUp</h6>
   </footer>
    </main>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+   
    <script>
        let btn = document.getElementById('btn');
         let number = document.getElementById('number');
@@ -283,12 +283,12 @@
 
           
             function count(){
-                counter++;
+                counter++; 
                 number.innerHTML = counter;
             }
 
    </script>
     <script src="./chicken.js"></script>
-   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
