@@ -15,7 +15,7 @@
    <link rel="stylesheet" href="./Css/food-stations.css">
 </head>
 <body>
-
+  <div id="preloader"></div>
     <header>
         <nav class="nav-bar">
             <div class="nav-bar__logo logged-in">
@@ -320,6 +320,16 @@
    </script>
    <script src="./user.js"></script>
     <script src="./chicken.js"></script>
-   
+
+    <script>
+
+      var loader = document.getElementById("preloader");
+      setTimeout(loads, 500);
+
+      function loads(){
+          loader.style.display = "none"
+      }
+
+  </script>
 </body>
 </html>

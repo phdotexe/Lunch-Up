@@ -10,6 +10,7 @@
     <title>Food Stations</title>
 </head>
 <body>
+    <div id="preloader"></div>
     <nav class="nav-bar">
         <div class="nav-bar__logo logged-in">
             <a href="./index.html">LunchUp</a>
@@ -183,5 +184,16 @@
     </footer>
     <script src="./nav.js"></script>
     <script src="./user.js"></script>
+
+    <script>
+
+        var loader = document.getElementById("preloader");
+        setTimeout(loads, 500);
+
+        function loads(){
+            loader.style.display = "none"
+        }
+
+    </script>
 </body>
 </html>
