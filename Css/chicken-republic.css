@@ -669,6 +669,12 @@ img{
   
 }
 
+#googlePlay{
+  width: 48px;
+  height: 48px;
+  margin: 0px;
+  text-align: center;
+}
 @media screen and (max-width:500px) {
   h2.food__station{
     text-align: center;
