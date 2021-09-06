@@ -143,27 +143,27 @@ b{
     color:#EB2C3C;
     cursor:pointer;
 }
-
-.fill-green{
+.main-container__left--budget--fill{
+    background-color: rgb(17, 255, 17);
     width: 100%;
     margin-top: 30px;
-    padding: 10px 0;
     border-radius:200px;
     border: 1px solid gray;
     background-color: rgb(17, 255, 17);
+    display: flex;
+    justify-content: flex-end;
 }
+
 .fill-red{
-    width: 10%;
-    margin-top: 30px;
+    width: 30%;
+   height: 100%;
     padding: 10px 0;
     border-radius:200px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    border: 1px solid gray;
+    
     background-color: #EB2C3C;
-    position:absolute;
-    top: 619.5px;
-    left:417px;
+
 }
     
 .main-container__right{
@@ -228,9 +228,6 @@ b{
         margin-right: 0px;
     }
 
-    .fill-red{
-        display: none;
-    }
 
     .main-container{
         flex-direction: column;
