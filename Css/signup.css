@@ -200,7 +200,7 @@ br{
     width: 100%;
     position: fixed;
     z-index: 100;
-    background: #000 url(../img/circle-loader-gif-2.gif) no-repeat center center;
+    background: #E11900 url(../img/circle-loader-gif-2.gif) no-repeat center center;
     background-size: 15%;
 }
 
