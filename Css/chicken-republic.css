@@ -698,11 +698,11 @@ img {
     top: -10px;
   }
 
-  .coke .count {
+  /* .coke .count {
     position: relative;
     left: 0px;
-    /* bottom: 30px; */
-  }
+    bottom: 30px;
+  } */
 
   .count {
     position: relative;
