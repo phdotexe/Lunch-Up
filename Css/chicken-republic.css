@@ -285,6 +285,10 @@ a {
   margin-right: 40px;
   margin-top: 50px;
 }
+.cartt{
+  position: sticky;
+  top: 0;
+}
 .cart-number {
   display: flex;
   align-items: center;
@@ -293,7 +297,7 @@ a {
   color: white;
   background-color: #eb2c3c;
   top: 6px;
-  left: 90%;
+  left: 96.1%;
   height: 50px;
   width: 50px;
   padding: 20px 10px 10px;
@@ -465,6 +469,9 @@ img {
 }
 
 @media screen  and (max-width: 900px){
+  .cartt{
+    position: relative;
+  }
   .cart-number{
     top: -10px;
     left: 80%;
