@@ -14,6 +14,39 @@ let num = document.querySelectorAll('.num');
 let counter = 0;
 let count1 = 1;
 
+let subtotal = document.querySelector('#subtotal')
+let prices = document.querySelectorAll('.my_prices')
+
+
+
+// TO CALCULATE FOR THE TOTAL PRICES
+let pricesArr = []
+pricesArr = Array.from(prices);
+
+
+let total = 0;
+
+for (var i of pricesArr){
+    total = Number(total) + Number(i.innerHTML)
+    subtotal.innerHTML = total
+}
+console.log(total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
