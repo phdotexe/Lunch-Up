@@ -321,6 +321,7 @@ a{
     border-radius: 50%;
     font-family: bold;
   font-family: poppins;
+  cursor: pointer;
 }
 #number{
   margin-bottom: 20px;

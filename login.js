@@ -4,7 +4,6 @@ let loginBtn = document.getElementById('loginBtn');
 let login_fail = document.createElement('p');
 login_fail.innerText = "Check login details";
 login_fail.style.color='red';
-login_fail.style.fontSize='12px';
 login_fail.style.textAlign='left';
 login_fail.style.fontSize='10px';
 login_fail.style.width='80%';
