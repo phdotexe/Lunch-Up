@@ -65,46 +65,91 @@ add[8].onclick = function(){
 subtract[0].onclick = function(){
     count1--;
     num[0].innerHTML = count1;
+    if(count1 < 1){
+        item[0].style.display = 'none';
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 subtract[1].onclick = function(){
     count1--;
     num[1].innerHTML = count1;
+    if(count1 < 1){
+        item[1].style.display = 'none';
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 subtract[2].onclick = function(){
     count1--;
     num[2].innerHTML = count1;
+    if(count1 < 1){
+        item[2].style.display = 'none'
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 subtract[3].onclick = function(){
     count1--;
     num[3].innerHTML = count1;
+    if(count1 < 1){
+        item[3].style.display = 'none';
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 subtract[4].onclick = function(){
     count1--;
     num[4].innerHTML = count1;
+    if(count1 < 1){
+        item[4].style.display = 'none';
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 subtract[5].onclick = function(){
     count1--;
     num[5].innerHTML = count1;
+    if(count1 < 1){
+        item[5].style.display = 'none';
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 subtract[6].onclick = function(){
     count1--;
     num[6].innerHTML = count1;
+    if(count1 < 1){
+        item[6].style.display = 'none';
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 subtract[7].onclick = function(){
     count1--;
     num[7].innerHTML = count1;
+    if(count1 < 1){
+        item[7].style.display = 'none';
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 subtract[8].onclick = function(){
     count1--;
     num[8].innerHTML = count1;
+    if(count1 < 1){
+        item[8].style.display = 'none';
+        counter--;
+        number.innerHTML = counter;
+    }
 }
 
 trash[0].onclick = function(){
@@ -192,12 +237,12 @@ btn[0].onclick = function (){
 
 btn[1].onclick = function (){
     count();
-    item[1].style.display = 'flex'
+    item[1].style.display = 'flex';
 }
 
 btn[2].onclick = function (){
     count();
-    item[2].style.display = 'flex'
+    item[2].style.display = 'flex';
 }
 
 btn[3].onclick = function (){
