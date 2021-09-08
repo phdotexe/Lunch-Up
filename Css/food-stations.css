@@ -321,30 +321,64 @@ body footer .copyright {
   line-height: 27px;
 }
 
-.nav-bar__list .user {
+.nav-bar__list .dropdown #profile_icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0px;
+  background: #EB2C3C;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
 }
 
-.nav-bar__list .user h5 {
-  margin: 0px;
-  font-size: 15px;
-  font-weight: bold;
+.nav-bar__list .dropdown #profile_icon:hover {
+  cursor: pointer;
+}
+
+.nav-bar__list .dropdown #dropdown-content {
+  display: none;
+  background-color: #EB2C3C;
+  border-radius: 10px;
+  position: absolute;
+  list-style: none;
+  z-index: 1;
+  margin-top: 0.5%;
+  padding: 0px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar__list .dropdown #dropdown-content #logout {
+  border-top: 1px solid #7C7C7C;
+}
+
+.nav-bar__list .dropdown #dropdown-content li {
+  display: block;
+  width: 100px;
+  text-align: center;
+  border: none;
+  padding: 10px 0px;
+}
+
+.nav-bar__list .dropdown #dropdown-content li:hover {
+  background: white;
+  color: #EB2C3C;
+}
+
+.nav-bar__list .dropdown #dropdown-content li a {
+  float: none;
+  padding: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar__list .dropdown #dropdown-content li a:hover {
+  background: white;
+  color: #EB2C3C;
 }
 
 .nav-bar__list__item {
@@ -392,9 +426,9 @@ body footer .copyright {
 }
 
 .nav-bar .profile {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav-bar .logged-in {
@@ -604,6 +638,10 @@ body footer .copyright {
         -ms-flex-align: center;
             align-items: center;
     background: #EB2C3C;
+    overflow-y: scroll;
+  }
+  body .nav-bar__list .dropdown #dropdown-content {
+    position: relative;
   }
   body .nav-bar__list__item {
     width: -webkit-fit-content;

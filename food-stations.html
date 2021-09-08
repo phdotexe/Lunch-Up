@@ -25,14 +25,13 @@
             <li class="nav-bar__list__item">
                 <a href="./tray.html">Tray</a>
             </li>
-            <li class="nav-bar__list__item user">
-                <a href="./profile.html"><i class="ri-user-3-line"></i>
-                    <h5 id="user"></h5>
-                </a>
+            <li class="nav-bar__list__item dropdown" onclick="dropdown()">
+                        <i class="ri-user-3-line" id="profile_icon"><i class="ri-arrow-down-s-fill"></i></i>
+                    <ul id="dropdown-content">
+                        <li><a href="./profile.html">Profile</a></li>
+                        <li id="logout"><a href="./login.html">Logout</a></li>
+                    </ul>
             </li>
-            <!-- <li class="nav-bar__list__item nav-bar__list__item--btn">
-                <a href="./signup.html">Create account</a>
-            </li> -->
         </ul>
         <i class="ri-menu-line" id="hamburger" click="myFunction()"></i>
     </nav>
