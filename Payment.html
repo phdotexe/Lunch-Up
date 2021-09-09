@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./Css/payment.css">
+  <title>Payment Page</title>
+</head>
+<body>
+  <div id="preloader"></div>
+  <!-- <form id="paymentForm">
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <div class="form-input">
+      <input type="email" id="email-address" required />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="first-name">First Name:</label>
+      <div class="form-input">
+        <input type="text" id="first-name" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="last-name">Last Name:</label>
+      <div class="form-input">
+        <input type="text" id="last-name" />
+      </div>
+    </div> -->
+
+    <!-- <div class="form-group">
+      <label for="last-name">Address:</label>
+      <div class="form-input">
+        <input type="text" id="Address" />
+      </div>
+    </div> -->
+
+
+    <!-- <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="tel" id="amount" required />
+    </div>
+
+    <div class="form-submit">
+      <button type="submit" onclick="payWithPaystack()"> Pay </button>
+    </div>
+  </form> -->
+
+
+  <div class="wrapper">
+    <h2>LunchUp Payment</h2>
+    <form id="paymentForm">
+        <!--Account Information Start-->
+        <h4>Account</h4>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="text" placeholder="First Name" id="first-name"  class="name">
+                <i class="fa fa-user icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="text" placeholder="Last Name" id="last-name"  class="name">
+                <i class="fa fa-user icon"></i>
+            </div>
+        </div>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="email" placeholder="Email Address" id="email-address" required class="names">
+                <i class="fa fa-envelope icon"></i>
+            </div>
+        </div>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="text" placeholder="Address" id="address" required class="name">
+                <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="input_group">
+            <div class="input_box">
+                <input type="text" placeholder="City" required  class="name">
+                <i class="fa fa-institution icon"></i>
+            </div>
+        </div>
+        <!--Account Information End-->
+
+        <div class="input_box">
+            <input type="text" placeholder="Amount" id="amount" required class="names">
+            <i class="fa fa-money icon" aria-hidden="true"></i>
+        </div>
+        <!--Payment Details End-->
+
+        <div class="input_group">
+            <div class="input_box">
+                <button type="submit"  onclick="payWithPaystack()">PAY NOW</button>
+            </div>
+        </div>
+
+    </form>
+
+   
+</div>
+<script>
+
+  var loader = document.getElementById("preloader");
+  setTimeout(loads, 500);
+
+  function loads(){
+      loader.style.display = "none"
+  }
+
+</script>
+  <script src="https://js.paystack.co/v1/inline.js"></script> 
+  <script src="./payment.js"></script>
+</body>
+</html>
