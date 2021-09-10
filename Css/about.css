@@ -123,6 +123,8 @@ header{
 
         .body__image--main{
             padding-bottom: 0px;
+            width: 95%;
+            height: 100%;
        }
 
         .body__image{
@@ -181,8 +183,8 @@ header{
       
        .body__image--main{
             width: 95%;
-            padding: 0px;
             height: 100%;
+            padding: 0px;
             
         }
 
@@ -317,19 +319,19 @@ header{
 
     @media (width:375px){
        .body{
-           margin-top: 100px;
+           margin-top: 0px;
        }
     }
 
     @media (width:414px){
         .body{
-            margin-top: 50px;
+            margin-top: 0px;
         }
      }
 
      @media (width:411px){
         .body{
-            margin-top: 100px;
+            margin-top: 0px;
         }
      }
  
