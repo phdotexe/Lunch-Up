@@ -42,14 +42,15 @@ header{
     .body__message{
         display: flex;
         flex-direction: column;
-        flex: 1;
+        padding-left: 50px;
+        
     }
-
-    .body__image{
-        display: flex;
-        flex: 1;
-        justify-content: flex-start;
-    }
+  .body__image--main{
+        padding-bottom: 50px;
+   }
+    /* .body__image{
+        padding-left: 30px;
+    } */
 
     .body__message--top{
         display: flex;
@@ -112,7 +113,7 @@ header{
         
         
         footer{
-            display: none;
+            display: block;
         }
 
         body{
@@ -121,38 +122,47 @@ header{
        
 
         .body__image--main{
-            width: 80%;
-            
-        }
+            padding-bottom: 0px;
+       }
 
         .body__image{
             display: flex;
             justify-content:center;
-            /* margin-left: 10px; */
+            margin-left: 10px;
             order: 1;
             margin-bottom: 20px;
+            flex-basis: 50%;
             
             
         }
 
         .body__message{
-            order: 2;
+            height: fit-content;
+            flex-direction: column;
+            padding-left: 0px;
+            flex-basis: 50%;
+        }
+        .body__message--bottom{
+            flex-basis: 50%;
+        }
+        .body__message--top{
+            flex-basis: 50%;
         }
 
         .body{
             padding: 20px 20px;
-          
-            flex-direction: column;
+            margin-top: 0px;
+            flex-direction: column-reverse;
 
         }
 
         .message__title{
             margin-top:0px;
-            font-size:18px
+            font-size:22px
         }
         
         .message__content{
-            font-size: 14px;
+            font-size: 16px;
         }
     }
 
@@ -171,6 +181,8 @@ header{
       
        .body__image--main{
             width: 80%;
+            padding: 0px;
+            height: 100%;
             
         }
 
@@ -219,6 +231,8 @@ header{
     
         .body__image--main{
             width: 80%;
+            padding: 0px;
+            height: 100%;
             
         }
 
@@ -309,7 +323,7 @@ header{
 
     @media (width:414px){
         .body{
-            margin-top: 80px;
+            margin-top: 50px;
         }
      }
 

@@ -138,6 +138,8 @@ background-color: rgb(17, 255, 17);
 
 .main-container__left--budget--sub h5{
 font-size:15px;
+margin-bottom: 0px;
+margin-top: 2px;
 }
 
 b{
@@ -148,23 +150,21 @@ b{
     background-color: rgb(17, 255, 17);
     width: 100%;
     margin-top: 30px;
+    outline: none;
     border-radius:200px;
     border: 1px solid gray;
-    background-color: rgb(17, 255, 17);
     display: flex;
     justify-content: flex-end;
 }
 
 .fill-red{
     width: 30%;
-   height: 100%;
+    height: 100%;
     padding: 10px 0;
     border-radius:200px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    
     background-color: #EB2C3C;
-
 }
     
 .main-container__right{
@@ -198,7 +198,7 @@ b{
 .orders--name{
     display:flex;
     flex-direction:column;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .orders--prices{
