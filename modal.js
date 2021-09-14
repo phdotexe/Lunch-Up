@@ -6,11 +6,10 @@ let btn = document.querySelectorAll('#btn');
 let number = document.getElementById('number');
 let food = document.getElementsByClassName('.food__container__food-name');
 let item = document.querySelectorAll('.items');
-let clr = document.querySelector('.clear');
+let clr = document.getElementById('clear');
 let div = document.querySelector('.cds');
 let num = document.querySelectorAll('.num');
 let arr = [];
-let arr2 = [];
 
 //
 //
@@ -19,9 +18,15 @@ let deliveryPrice = document.getElementById('delivery').innerText;
 let totalFee = document.getElementById('totalFee');
 
 let food_img = document.querySelectorAll('.food-bg');
-number.innerText = sessionStorage.length;
+let items = document.querySelectorAll('.items');
+if(sessionStorage.length >= 1){
+    console.log('hey')
+    number.innerText = sessionStorage.length-1;
+}else{
+    number.innerText = sessionStorage.length;
+}
 // a fucntion that does a lot :)
-function doALot(){
+function doALot() {
     arr = [];
     let prices_ = document.querySelectorAll('.price');
     prices_.forEach((e => {
@@ -29,13 +34,16 @@ function doALot(){
         subTotal.innerText = `₦${arr.reduce((a, b) => a + b, 0)}`;
     }))
     totalFee.innerText = `₦${Number(subTotal.innerText.replace('₦', '')) + Number(deliveryPrice.replace('₦', ''))}`
-    if(arr.length == 0){
+    if (arr.length == 0) {
         subTotal.innerText = `₦${0}`;
         totalFee.innerText = `₦${0}`;
     }
-    if(cartBox.innerHTML != ''){
-        orderBtn.setAttribute("onclick","pay_()")
+    if (cartBox.innerHTML != '') {
+        orderBtn.setAttribute("onclick", "pay_()")
     }
+    items = document.querySelectorAll('.items');
+    number.innerText = items.length;
+
 }
 
 
@@ -53,7 +61,11 @@ function addtoCart(e) {
     foods.price = food_price;
     foods.img = imageURL;
     sessionStorage.setItem(food_name, JSON.stringify(foods))
-    number.innerText = sessionStorage.length;
+    if(sessionStorage.length >= 1){
+        number.innerText = sessionStorage.length-1;
+    }else{
+        number.innerText = sessionStorage.length;
+    }
 }
 
 // getting the items from session storage to the cart on click
@@ -144,12 +156,12 @@ function trash_(e) {
     sessionStorage.removeItem(e.parentElement.children[0].children[1].children[0].innerText);
     number.innerText = sessionStorage.length;
     doALot()
-   
+
 }
 
 //clearing the cart
 clr.setAttribute('onclick', 'clear_()')
-function clear_(){
+function clear_() {
     cartBox.innerHTML = ''
     sessionStorage.clear()
     number.innerText = 0;
@@ -160,8 +172,8 @@ function clear_(){
 //making payment
 let orderBtn = document.getElementById('orderBtn')
 
-function pay_(){
-    let orderDeets ={}
+function pay_() {
+    let orderDeets = {}
     let user_data = JSON.parse(localStorage.getItem('user'));
     orderDeets.phone = user_data.phone;
     orderDeets.amount = totalFee.innerText;
