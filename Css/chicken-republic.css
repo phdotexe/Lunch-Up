@@ -285,18 +285,14 @@ a {
   margin-right: 40px;
   margin-top: 50px;
 }
-.cartt{
-  position: sticky;
-  top: 0;
-}
 .cart-number {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   color: white;
   background-color: #eb2c3c;
   top: 6px;
+  margin-left: 1200px;
   left: 96.1%;
   height: 50px;
   width: 50px;
@@ -470,12 +466,10 @@ img {
 }
 
 @media screen  and (max-width: 900px){
-  .cartt{
-    position: relative;
-  }
   .cart-number{
     top: -10px;
     left: 80%;
+    margin-left: auto;
     z-index: -10;
   }
   .container-fluid {
