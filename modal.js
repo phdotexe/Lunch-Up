@@ -20,7 +20,6 @@ let totalFee = document.getElementById('totalFee');
 let food_img = document.querySelectorAll('.food-bg');
 let items = document.querySelectorAll('.items');
 if(sessionStorage.length >= 1){
-    console.log('hey')
     number.innerText = sessionStorage.length-1;
 }else{
     number.innerText = sessionStorage.length;
@@ -178,6 +177,14 @@ function pay_() {
     orderDeets.phone = user_data.phone;
     orderDeets.amount = totalFee.innerText;
     localStorage.setItem('order', JSON.stringify(orderDeets))
-    let current = window.location.href;
-    window.location.href = window.location.href.replace(current, 'https://paystack.com/pay/lunch-up');
+    let localServer = '127.0.0.1:5502';
+    let current_href = window.location.href;
+    let current_pathname = window.location.pathname;
+    console.log(current_href)
+    if(window.location.href.includes(localServer)) {
+        window.location.href = window.location.href.replace(current_href, '/Payment.html');
+    }else{
+        window.location.href = window.location.href.replace(current_href, `${current_pathname}Payment.html`);
+    }   
+    // window.location.href = window.location.href.replace(window.location.href,'https://paystack.com/pay/lunch-up')
 }
