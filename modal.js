@@ -162,7 +162,12 @@ function trash_(e) {
 clr.setAttribute('onclick', 'clear_()')
 function clear_() {
     cartBox.innerHTML = ''
-    sessionStorage.clear()
+    let user_data = JSON.parse(localStorage.getItem('user'));
+    let user_login = {}
+    user_login.phone = user_data.phone;
+    user_login.password = user_data.password;
+    sessionStorage.clear();
+    sessionStorage.setItem('user_login', JSON.stringify(user_login))
     number.innerText = 0;
     doALot()
     orderBtn.removeAttribute('onclick')
