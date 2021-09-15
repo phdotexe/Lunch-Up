@@ -352,6 +352,10 @@ a {
   display: inline;
 }
 
+
+/* CSS for MODAL   */
+
+
 .title {
   font-size: 48px;
   color: #e11900;
@@ -363,9 +367,11 @@ a {
 
 .header-time i,
 span {
-  font-size: 10px;
-  /* position: relative; */
+  font-size: 15px;
+  font-weight: 400;
   bottom: 5px;
+  color: #e11900;
+  
 }
 
 /* i{
@@ -402,6 +408,10 @@ img {
 .icon i {
   color: #fff;
 }
+.icon{
+  border-radius: 5px;
+  padding-top: 2px;
+}
 
 .num {
   width: 50px;
@@ -411,6 +421,8 @@ img {
   margin-right: 10px;
   display: flex;
   justify-content: center;
+  border-radius: 5px;
+  /* padding-bottom: 9px; */
 }
 
 .count {
@@ -428,6 +440,7 @@ img {
   position: relative;
   top: 20px;
   left: 20px;
+  width: 170px;
 }
 
 .price h5 {
@@ -436,7 +449,9 @@ img {
 
 .trash {
   position: relative;
-  top: 30px;
+  top: 21px;
+  font-size: 25px;
+  height: 25px;
 }
 
 .total {
@@ -450,7 +465,11 @@ img {
   justify-content: start;
   align-items: flex-start;
 }
-
+.clear{
+  border: 1px solid gray;
+  outline: none;
+  font-size: 20px;
+}
 .btn-order {
   /* position: relative;
     right: 360px; */
@@ -458,7 +477,10 @@ img {
   color: #fff;
   width: 137px;
   height: 38px;
+  border: none;
+  outline: none;
   border-radius: 20px;
+  font-weight: 600;
 }
 #preloader{
   height: 100vh;

@@ -34,10 +34,25 @@ console.log(total)
 
 
 
+console.log(div)
 
 
 
+// Code for the button
 
+// let orderBtn = document.querySelector('.btn-order');
+
+// function button_access(){
+//     if (div.innerHTML < 0){
+//         console.log(true)
+//     }
+//     else{
+//         console.log(false)
+//     }
+// }
+
+// console.log(orderBtn)
+// orderBtn.addEventListener('click', button_access)
 
 
 
