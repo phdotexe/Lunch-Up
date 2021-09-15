@@ -9,6 +9,8 @@ let item = document.querySelectorAll('.items');
 let clr = document.getElementById('clear');
 let div = document.querySelector('.cds');
 let num = document.querySelectorAll('.num');
+let orderBtn = document.getElementById('orderBtn')
+let myForm = document.getElementById('myForm')
 let arr = [];
 
 //
@@ -37,8 +39,10 @@ function doALot() {
         subTotal.innerText = `₦${0}`;
         totalFee.innerText = `₦${0}`;
     }
-    if (cartBox.innerHTML != '') {
-        orderBtn.setAttribute("onclick", "pay_()")
+    if (cartBox.innerHTML !== '') {
+        myForm.addEventListener('submit', pay_)
+    }else{
+        myForm.removeEventListener('submit', pay_)
     }
     items = document.querySelectorAll('.items');
     number.innerText = items.length;
@@ -174,22 +178,23 @@ function clear_() {
 }
 
 //making payment
-let orderBtn = document.getElementById('orderBtn')
 
-function pay_() {
+function pay_(e) {
+    e.preventDefault();
     let orderDeets = {}
     let user_data = JSON.parse(localStorage.getItem('user'));
     orderDeets.phone = user_data.phone;
     orderDeets.amount = totalFee.innerText;
     localStorage.setItem('order', JSON.stringify(orderDeets))
-    let localServer = '127.0.0.1:5502';
-    let current_href = window.location.href;
-    let current_pathname = window.location.pathname;
-    console.log(current_href)
-    if(window.location.href.includes(localServer)) {
-        window.location.href = window.location.href.replace(current_href, '/Payment.html');
-    }else{
-        window.location.href = window.location.href.replace(current_href, `${current_pathname}Payment.html`);
-    }   
-    // window.location.href = window.location.href.replace(window.location.href,'https://paystack.com/pay/lunch-up')
+    // let localServer = '127.0.0.1:5502';
+    // let current_href = window.location.href;
+    // let current_pathname = window.location.pathname;
+    // console.log(current_href)
+    // if(window.location.href.includes(localServer)) {
+    //     window.location.href = window.location.href.replace(current_href, '/Payment.html');
+    // }else{
+    //     window.location.href = window.location.href.replace(current_href, `${current_pathname}Payment.html`);
+    // }   
+    //https://paystack.com/pay/lunch-up
+    window.location.href = window.location.href.replace(window.location.href,'Payment.html')
 }

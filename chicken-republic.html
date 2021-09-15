@@ -61,38 +61,37 @@
             <div class="modal fade" id="foodmodal" tabindex="-1" aria-labelledby="foodmodalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form>
-                            <div class="modal-header">
-                                <h5 class="modal-title title" id="foodmodalLabel">Tray</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                        <div class="modal-header">
+                            <h5 class="modal-title title" id="foodmodalLabel">Tray</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="header-text d-flex">
+                                <h5>Chicken Republic</h5>
+                                <button class="clear" id="clear">Clear Tray</button>
                             </div>
-                            <div class="modal-body">
-                                <div class="header-text d-flex">
-                                    <h5>Chicken Republic</h5>
-                                    <button class="clear" id="clear">Clear Tray</button>
-                                </div>
-                                <div class="header-time">
-                                    <i class="bx bx-time"></i><span>20mins</span>
-                                    <i class="bx bx-map"></i><span>Rumuola</span>
-                                </div>
-                                <h6 class="order">Your Order</h6>
-                                <div class="cds">
+                            <div class="header-time">
+                                <i class="bx bx-time"></i><span>20mins</span>
+                                <i class="bx bx-map"></i><span>Rumuola</span>
+                            </div>
+                            <h6 class="order">Your Order</h6>
+                            <div class="cds">
 
-                                </div>
-                                <div class="total subtotal d-flex text-secondary">
-                                    <p>Sub Total</p>
-                                    <p id="subtotal">0</p>
-                                </div>
-                                <div class="total delivery-fee d-flex text-secondary">
-                                    <p>Delivery fee</p>
-                                    <p id="delivery">₦200</p>
-                                </div>
-                                <div class="total total1 d-flex fw-bold">
-                                    <p>Total</p>
-                                    <p id="totalFee">0</p>
-                                </div>
                             </div>
+                            <div class="total subtotal d-flex text-secondary">
+                                <p>Sub Total</p>
+                                <p id="subtotal">0</p>
+                            </div>
+                            <div class="total delivery-fee d-flex text-secondary">
+                                <p>Delivery fee</p>
+                                <p id="delivery">₦200</p>
+                            </div>
+                            <div class="total total1 d-flex fw-bold">
+                                <p>Total</p>
+                                <p id="totalFee">0</p>
+                            </div>
+                        </div>
+                        <form id="myForm">
                             <div class="modal-footer">
                                 <button type="submit" id="orderBtn" class="btn-order">Order</button>
                             </div>
