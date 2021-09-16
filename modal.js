@@ -21,9 +21,9 @@ let totalFee = document.getElementById('totalFee');
 
 let food_img = document.querySelectorAll('.food-bg');
 let items = document.querySelectorAll('.items');
-if(sessionStorage.length >= 1){
-    number.innerText = sessionStorage.length-1;
-}else{
+if (sessionStorage.length >= 1) {
+    number.innerText = sessionStorage.length - 1;
+} else {
     number.innerText = sessionStorage.length;
 }
 // a fucntion that does a lot :)
@@ -41,7 +41,7 @@ function doALot() {
     }
     if (cartBox.innerHTML !== '') {
         myForm.addEventListener('submit', pay_)
-    }else{
+    } else {
         myForm.removeEventListener('submit', pay_)
     }
     items = document.querySelectorAll('.items');
@@ -64,9 +64,9 @@ function addtoCart(e) {
     foods.price = food_price;
     foods.img = imageURL;
     sessionStorage.setItem(food_name, JSON.stringify(foods))
-    if(sessionStorage.length >= 1){
-        number.innerText = sessionStorage.length-1;
-    }else{
+    if (sessionStorage.length >= 1) {
+        number.innerText = sessionStorage.length - 1;
+    } else {
         number.innerText = sessionStorage.length;
     }
 }
@@ -165,7 +165,6 @@ function trash_(e) {
 //clearing the cart
 clr.setAttribute('onclick', 'clear_()')
 function clear_() {
-    cartBox.innerHTML = ''
     let user_data = JSON.parse(localStorage.getItem('user'));
     let user_login = {}
     user_login.phone = user_data.phone;
@@ -186,15 +185,11 @@ function pay_(e) {
     orderDeets.phone = user_data.phone;
     orderDeets.amount = totalFee.innerText;
     localStorage.setItem('order', JSON.stringify(orderDeets))
-    // let localServer = '127.0.0.1:5502';
-    // let current_href = window.location.href;
-    // let current_pathname = window.location.pathname;
-    // console.log(current_href)
-    // if(window.location.href.includes(localServer)) {
-    //     window.location.href = window.location.href.replace(current_href, '/Payment.html');
-    // }else{
-    //     window.location.href = window.location.href.replace(current_href, `${current_pathname}Payment.html`);
-    // }   
-    //https://paystack.com/pay/lunch-up
-    window.location.href = window.location.href.replace(window.location.href,'Payment.html')
+    window.location.href = window.location.href.replace(window.location.href, 'Payment.html');
+    cartBox.innerHTML = ''
+    let user_login = {}
+    user_login.phone = user_data.phone;
+    user_login.password = user_data.password;
+    sessionStorage.clear();
+    sessionStorage.setItem('user_login', JSON.stringify(user_login))
 }

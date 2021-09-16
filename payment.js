@@ -15,6 +15,9 @@ function payWithPaystack(e) {
     callback: function(response){
       let message = 'Payment complete! Reference: ' + response.reference;
       alert(message);
+      setTimeout((e  => {
+      window.location.href = window.location.href.replace(window.location.href, 'food-stations.html');
+      }), 1000)
     }
   });
   handler.openIframe();
