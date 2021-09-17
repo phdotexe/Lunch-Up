@@ -20,7 +20,12 @@ let deliveryPrice = document.getElementById('delivery').innerText;
 let totalFee = document.getElementById('totalFee');
 
 let food_img = document.querySelectorAll('.food-bg');
-number.innerText = sessionStorage.length;
+
+if(sessionStorage.length <= 1){
+    number.innerText = 0;
+}else{
+    number.innerText = sessionStorage.length-1;
+}
 // a fucntion that does a lot :)
 function doALot(){
     arr = [];
@@ -38,6 +43,7 @@ function doALot(){
         // orderBtn.setAttribute("onclick","pay_()")
         myForm.addEventListener('submit', pay_)
     }
+    
 }
 
 
@@ -55,7 +61,7 @@ function addtoCart(e) {
     foods.price = food_price;
     foods.img = imageURL;
     sessionStorage.setItem(food_name, JSON.stringify(foods))
-    number.innerText = sessionStorage.length;
+    number.innerText = sessionStorage.length-1;
 }
 
 // getting the items from session storage to the cart on click
@@ -153,7 +159,12 @@ function trash_(e) {
 clr.setAttribute('onclick', 'clear_()')
 function clear_(){
     cartBox.innerHTML = ''
+    let user_data = JSON.parse(localStorage.getItem('user'));
+    let login_data = {};
+    login_data.phone = user_data.phone;
+    login_data.password = user_data.password;
     sessionStorage.clear()
+    sessionStorage.setItem('user_login', JSON.stringify(login_data));
     number.innerText = 0;
     doALot()
     orderBtn.removeAttribute('onclick')
@@ -171,6 +182,12 @@ function pay_(e){
     localStorage.setItem('order', JSON.stringify(orderDeets))
     let current = window.location.href;
     window.location.href = window.location.href.replace(current, 'Payment.html');
+    cartBox.innerHTML = ''
+    let login_data = {};
+    login_data.phone = user_data.phone;
+    login_data.password = user_data.password;
+    sessionStorage.clear()
+    sessionStorage.setItem('user_login', JSON.stringify(login_data));
     // let localServer = '127.0.0.1:5502';
     // let current_href = window.location.href;
     // let current_pathname = window.location.pathname;
