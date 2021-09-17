@@ -3,7 +3,7 @@ let user_location = document.getElementById('search')
 let Form = document.getElementById('myForm')
 
 Form.addEventListener('submit', ShowLocation)
-
+user_location.focus()
 function ShowLocation(e){
     e.preventDefault()
     // let current_href = window.location.href;
