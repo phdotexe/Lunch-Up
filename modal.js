@@ -6,12 +6,12 @@ let btn = document.querySelectorAll('#btn');
 let number = document.getElementById('number');
 let food = document.getElementsByClassName('.food__container__food-name');
 let item = document.querySelectorAll('.items');
-let clr = document.getElementById('clear');
+let clr = document.querySelector('.clear');
 let div = document.querySelector('.cds');
 let num = document.querySelectorAll('.num');
-let orderBtn = document.getElementById('orderBtn')
-let myForm = document.getElementById('myForm')
 let arr = [];
+let arr2 = [];
+let myForm = document.getElementById('myForm');
 
 //
 //
@@ -20,14 +20,9 @@ let deliveryPrice = document.getElementById('delivery').innerText;
 let totalFee = document.getElementById('totalFee');
 
 let food_img = document.querySelectorAll('.food-bg');
-let items = document.querySelectorAll('.items');
-if (sessionStorage.length >= 1) {
-    number.innerText = sessionStorage.length - 1;
-} else {
-    number.innerText = sessionStorage.length;
-}
+number.innerText = sessionStorage.length;
 // a fucntion that does a lot :)
-function doALot() {
+function doALot(){
     arr = [];
     let prices_ = document.querySelectorAll('.price');
     prices_.forEach((e => {
@@ -35,18 +30,14 @@ function doALot() {
         subTotal.innerText = `₦${arr.reduce((a, b) => a + b, 0)}`;
     }))
     totalFee.innerText = `₦${Number(subTotal.innerText.replace('₦', '')) + Number(deliveryPrice.replace('₦', ''))}`
-    if (arr.length == 0) {
+    if(arr.length == 0){
         subTotal.innerText = `₦${0}`;
         totalFee.innerText = `₦${0}`;
     }
-    if (cartBox.innerHTML !== '') {
+    if(cartBox.innerHTML != ''){
+        // orderBtn.setAttribute("onclick","pay_()")
         myForm.addEventListener('submit', pay_)
-    } else {
-        myForm.removeEventListener('submit', pay_)
     }
-    items = document.querySelectorAll('.items');
-    number.innerText = items.length;
-
 }
 
 
@@ -64,11 +55,7 @@ function addtoCart(e) {
     foods.price = food_price;
     foods.img = imageURL;
     sessionStorage.setItem(food_name, JSON.stringify(foods))
-    if (sessionStorage.length >= 1) {
-        number.innerText = sessionStorage.length - 1;
-    } else {
-        number.innerText = sessionStorage.length;
-    }
+    number.innerText = sessionStorage.length;
 }
 
 // getting the items from session storage to the cart on click
@@ -159,44 +146,38 @@ function trash_(e) {
     sessionStorage.removeItem(e.parentElement.children[0].children[1].children[0].innerText);
     number.innerText = sessionStorage.length;
     doALot()
-
+   
 }
 
 //clearing the cart
 clr.setAttribute('onclick', 'clear_()')
-function clear_() {
-    let user_data = JSON.parse(localStorage.getItem('user'));
-    let user_login = {}
-    user_login.phone = user_data.phone;
-    user_login.password = user_data.password;
-    sessionStorage.clear();
-    sessionStorage.setItem('user_login', JSON.stringify(user_login))
+function clear_(){
+    cartBox.innerHTML = ''
+    sessionStorage.clear()
     number.innerText = 0;
     doALot()
     orderBtn.removeAttribute('onclick')
 }
 
 //making payment
+let orderBtn = document.getElementById('orderBtn')
 
-function pay_(e) {
+function pay_(e){
     e.preventDefault();
-    let orderDeets = {}
+    let orderDeets ={}
     let user_data = JSON.parse(localStorage.getItem('user'));
     orderDeets.phone = user_data.phone;
     orderDeets.amount = totalFee.innerText;
-    let name_ = document.querySelectorAll('.price_')
-    let orderDeets_ = {}
-    name_.forEach((e => {
-        orderDeets_[e.previousElementSibling.innerText] = e.innerText;
-    }))
-    localStorage.setItem('orderDetails', JSON.stringify(orderDeets_))
     localStorage.setItem('order', JSON.stringify(orderDeets))
-    // window.location.href = window.location.href.replace(window.location.href, 'Payment.html');
-    // cartBox.innerHTML = ''
-    // let user_login = {}
-    // user_login.phone = user_data.phone;
-    // user_login.password = user_data.password;
-    // sessionStorage.clear();
-    // sessionStorage.setItem('user_login', JSON.stringify(user_login))
-}
+    // let current = window.location.href;
+    // window.location.href = window.location.href.replace(current, 'Payment.html');
+    let localServer = '127.0.0.1:5502';
+    let current_href = window.location.href;
+    let current_pathname = window.location.pathname;
 
+    if(window.location.href.includes(localServer)) {
+        window.location.href = window.location.href.replace(current_pathname, '/Payment.html');
+    }else{
+        window.location.href = window.location.href.replace(current_pathname, `${current_pathname}Payment.html`);
+    }    
+}
