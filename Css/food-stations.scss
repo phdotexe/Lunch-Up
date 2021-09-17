@@ -195,7 +195,7 @@ body{
         color: $primary_color;
         font-size: 30px;
     }
-    
+   
     &__logo{
         display: flex;
         align-items: center;
@@ -218,19 +218,57 @@ body{
         align-items: center;
         font-size: 18px;
         line-height: 27px;
-        .user{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: fit-content;
-            padding: 0px;
-            h5{
-                margin: 0px;
-                font-size: 15px;
-                font-weight: bold;
+        
+        .dropdown{
+            #profile_icon{
+                display: flex;
+                justify-content: center;
+                background: #EB2C3C;
+                color: #fff;
+                padding: 10px;
+                border-radius: 50%;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            #dropdown-content{
+                display: none;
+                background-color: #EB2C3C;
+                border-radius: 10px;
+                position: absolute;
+                list-style: none;
+                z-index: 1;
+                margin-top: 0.5%;
+                padding: 0px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                #logout{
+                    border-top: 1px solid #7C7C7C;
+                }
+                li{
+                    display: block;
+                    width: 100px;
+                    text-align: center;
+                    border: none;
+                    padding: 10px 0px;
+                    &:hover{
+                        background: white;
+                        color: #EB2C3C;
+                    }
+                    a{
+                        float: none;
+                        padding: 10px 0px;
+                        text-align: center;
+                        text-decoration: none;
+                        color:white;
+                        &:hover{
+                            background: white;
+                            color: #EB2C3C;
+                        }
+                    }
+                }
             }
         }
+        
         &__item{
             padding: 8px 18px 0px;
             a{
@@ -271,7 +309,7 @@ body{
 
     }
     .profile{
-        align-items: flex-end;
+        align-items: center;
     }
     .logged-in{
         flex: 2;
@@ -420,6 +458,12 @@ body{
                 justify-content: space-evenly;
                 align-items: center;
                 background: $primary_color;
+                overflow-y: scroll;
+                .dropdown{
+                    #dropdown-content{
+                        position: relative;
+                    }
+                }
                 &__item{
                     width: fit-content;
                     border-radius: 10px;

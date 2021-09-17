@@ -1,3 +1,4 @@
+
 var y = document.querySelector('#hamburger');
 var nav__Menu = document.querySelector('.nav-bar__list');
 var _body = document.querySelector('body');
@@ -7,318 +8,164 @@ let food = document.getElementsByClassName('.food__container__food-name');
 let item = document.querySelectorAll('.items');
 let clr = document.querySelector('.clear');
 let div = document.querySelector('.cds');
-let trash = document.querySelectorAll('.trash');
-let add = document.querySelectorAll('.plus')
-let subtract = document.querySelectorAll('.minus')
 let num = document.querySelectorAll('.num');
-let counter = 0;
-let count1 = 1;
+let arr = [];
+let arr2 = [];
 
-let subtotal = document.querySelector('#subtotal')
-let prices = document.querySelectorAll('.my_prices')
+//
+//
+let subTotal = document.getElementById('subtotal');
+let deliveryPrice = document.getElementById('delivery').innerText;
+let totalFee = document.getElementById('totalFee');
 
-
-
-// TO CALCULATE FOR THE TOTAL PRICES
-let pricesArr = []
-pricesArr = Array.from(prices);
-
-
-let total = 0;
-
-for (var i of pricesArr){
-    total = Number(total) + Number(i.innerHTML)
-    subtotal.innerHTML = total
-}
-console.log(total)
-
-
-
-console.log(div)
-
-
-
-// Code for the button
-
-// let orderBtn = document.querySelector('.btn-order');
-
-// function button_access(){
-//     if (div.innerHTML < 0){
-//         console.log(true)
-//     }
-//     else{
-//         console.log(false)
-//     }
-// }
-
-// console.log(orderBtn)
-// orderBtn.addEventListener('click', button_access)
-
-
-
-
-
-
-
-
-
-
-
-
-add[0].onclick = function(){
-    count1++;
-    num[0].innerHTML = count1;
-}
-
-add[1].onclick = function(){
-    count1++;
-    num[1].innerHTML = count1;
-}
-
-add[2].onclick = function(){
-    count1++;
-    num[2].innerHTML = count1;
-}
-
-add[3].onclick = function(){
-    count1++;
-    num[3].innerHTML = count1;
-}
-
-add[4].onclick = function(){
-    count1++;
-    num[4].innerHTML = count1;
-}
-
-add[5].onclick = function(){
-    count1++;
-    num[5].innerHTML = count1;
-}
-
-add[6].onclick = function(){
-    count1++;
-    num[6].innerHTML = count1;
-}
-
-add[7].onclick = function(){
-    count1++;
-    num[7].innerHTML = count1;
-}
-
-add[8].onclick = function(){
-    count1++;
-    num[8].innerHTML = count1;
-}
-
-subtract[0].onclick = function(){
-    count1--;
-    num[0].innerHTML = count1;
-    if(count1 < 1){
-        item[0].style.display = 'none';
-        counter--;
-        number.innerHTML = counter;
+let food_img = document.querySelectorAll('.food-bg');
+number.innerText = sessionStorage.length;
+// a fucntion that does a lot :)
+function doALot(){
+    arr = [];
+    let prices_ = document.querySelectorAll('.price');
+    prices_.forEach((e => {
+        arr.push(Number(e.children[1].innerText.replace('₦', '')));
+        subTotal.innerText = `₦${arr.reduce((a, b) => a + b, 0)}`;
+    }))
+    totalFee.innerText = `₦${Number(subTotal.innerText.replace('₦', '')) + Number(deliveryPrice.replace('₦', ''))}`
+    if(arr.length == 0){
+        subTotal.innerText = `₦${0}`;
+        totalFee.innerText = `₦${0}`;
+    }
+    if(cartBox.innerHTML != ''){
+        orderBtn.setAttribute("onclick","pay_()")
     }
 }
 
-subtract[1].onclick = function(){
-    count1--;
-    num[1].innerHTML = count1;
-    if(count1 < 1){
-        item[1].style.display = 'none';
-        counter--;
-        number.innerHTML = counter;
+
+//Saving the clicked items to session storage
+btn.forEach((e => {
+    e.setAttribute('onclick', 'addtoCart(this)');
+}))
+function addtoCart(e) {
+    //number.innerText++;
+    let foods = {};
+    let food_name = e.previousElementSibling.children[0].innerText;
+    let food_price = e.previousElementSibling.children[1].innerText.replace('₦', '');
+    let imageURL = getComputedStyle(e.previousElementSibling.previousElementSibling).backgroundImage.split('"')[1];
+    foods.name = food_name;
+    foods.price = food_price;
+    foods.img = imageURL;
+    sessionStorage.setItem(food_name, JSON.stringify(foods))
+    number.innerText = sessionStorage.length;
+}
+
+// getting the items from session storage to the cart on click
+let cart = document.querySelector('.cart-number');
+let cartBox = document.querySelector('.cds');
+cart.setAttribute('onclick', 'showCart()');
+
+function showCart() {
+    cartBox.innerHTML = '';
+    let cartList = Object.values(sessionStorage);
+    cartList.forEach((e => {
+        let food = JSON.parse(e);
+        let cartItem = `
+        <div class="items chicken-pot">
+        <div class="img-txt d-flex">
+          <img class="img-fluid" src=${food.img}>
+          <div class="price">
+            <h5>${food.name}</h5>
+            <p class="price_">₦${food.price}</p>
+          </div>
+        </div>
+        <div class="count d-flex">
+          <div class="icon minus">
+            <i class="bx bx-minus"></i>
+          </div>
+          <div class="num">1</div>
+          <div class="icon plus">
+            <i class="bx bx-plus"></i>
+          </div>
+        </div>
+        <div class="trash">
+          <i class="bx bx-trash"></i>
+        </div>
+      </div>
+        `
+        if (food.name != undefined) {
+            cartBox.innerHTML += cartItem;
+        }
+    }))
+    //for the add button
+    let add = document.querySelectorAll('.plus');
+    add.forEach((e => {
+        e.setAttribute('onclick', 'add_(this)');
+
+    }))
+
+    // for the subtract button
+    let subtract = document.querySelectorAll('.minus');
+    subtract.forEach((e => {
+        e.setAttribute('onclick', 'subtract_(this)');
+    }));
+
+    //for trash button
+    let trash = document.querySelectorAll('.trash');
+    trash.forEach((e => {
+        e.setAttribute('onclick', 'trash_(this)');
+    }))
+    doALot()
+}
+
+
+// increasing the number on click of plus
+function add_(e) {
+    arr = []
+    e.previousElementSibling.innerText++;
+    let num = e.previousElementSibling.innerText
+    let price = e.parentElement.parentElement.children[0].children[1].children[1].innerText.replace('₦', '');
+    price = num * (price / ((num > 1) ? num - 1 : 1))
+    e.parentElement.parentElement.children[0].children[1].children[1].innerText = `₦${price}`;
+    doALot()
+}
+
+// decreasing the number on click of minus
+function subtract_(e) {
+    if (e.nextElementSibling.innerText != 1) {
+        e.nextElementSibling.innerText--;
+        let num = e.nextElementSibling.innerText;
+        let price = e.parentElement.parentElement.children[0].children[1].children[1].innerText.replace('₦', '');
+        price = num * (price / (Number(num) + 1))
+        e.parentElement.parentElement.children[0].children[1].children[1].innerText = `₦${price}`
+        doALot()
     }
 }
 
-subtract[2].onclick = function(){
-    count1--;
-    num[2].innerHTML = count1;
-    if(count1 < 1){
-        item[2].style.display = 'none'
-        counter--;
-        number.innerHTML = counter;
-    }
+//deleting a cart item
+function trash_(e) {
+    e.parentElement.remove(e);
+    sessionStorage.removeItem(e.parentElement.children[0].children[1].children[0].innerText);
+    number.innerText = sessionStorage.length;
+    doALot()
+   
 }
 
-subtract[3].onclick = function(){
-    count1--;
-    num[3].innerHTML = count1;
-    if(count1 < 1){
-        item[3].style.display = 'none';
-        counter--;
-        number.innerHTML = counter;
-    }
+//clearing the cart
+clr.setAttribute('onclick', 'clear_()')
+function clear_(){
+    cartBox.innerHTML = ''
+    sessionStorage.clear()
+    number.innerText = 0;
+    doALot()
+    orderBtn.removeAttribute('onclick')
 }
 
-subtract[4].onclick = function(){
-    count1--;
-    num[4].innerHTML = count1;
-    if(count1 < 1){
-        item[4].style.display = 'none';
-        counter--;
-        number.innerHTML = counter;
-    }
-}
+//making payment
+let orderBtn = document.getElementById('orderBtn')
 
-subtract[5].onclick = function(){
-    count1--;
-    num[5].innerHTML = count1;
-    if(count1 < 1){
-        item[5].style.display = 'none';
-        counter--;
-        number.innerHTML = counter;
-    }
-}
-
-subtract[6].onclick = function(){
-    count1--;
-    num[6].innerHTML = count1;
-    if(count1 < 1){
-        item[6].style.display = 'none';
-        counter--;
-        number.innerHTML = counter;
-    }
-}
-
-subtract[7].onclick = function(){
-    count1--;
-    num[7].innerHTML = count1;
-    if(count1 < 1){
-        item[7].style.display = 'none';
-        counter--;
-        number.innerHTML = counter;
-    }
-}
-
-subtract[8].onclick = function(){
-    count1--;
-    num[8].innerHTML = count1;
-    if(count1 < 1){
-        item[8].style.display = 'none';
-        counter--;
-        number.innerHTML = counter;
-    }
-}
-
-trash[0].onclick = function(){
-    item[0].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-trash[1].onclick = function(){
-    item[1].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-trash[2].onclick = function(){
-    item[2].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-trash[3].onclick = function(){
-    item[3].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-trash[4].onclick = function(){
-    item[4].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-trash[5].onclick = function(){
-    item[5].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-trash[6].onclick = function(){
-    item[6].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-trash[7].onclick = function(){
-    item[7].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-trash[8].onclick = function(){
-    item[8].style.display = 'none'
-    counter--; 
-    number.innerHTML = counter;
-}
-
-
-
-function count(){
-    counter++; 
-    number.innerHTML = counter;
-}
-
-clr.onclick = function(){
-    item[0].style.display = 'none'
-    item[1].style.display = 'none'
-    item[2].style.display = 'none'
-    item[3].style.display = 'none'
-    item[4].style.display = 'none'
-    item[5].style.display = 'none'
-    item[6].style.display = 'none'
-    item[7].style.display = 'none'
-    item[8].style.display = 'none'
-    counter = 0
-    number.innerHTML = counter;
-}
-
-
-
-
-btn[0].onclick = function (){
-    count();
-    item[0].style.display = 'flex';
-}
-
-btn[1].onclick = function (){
-    count();
-    item[1].style.display = 'flex';
-}
-
-btn[2].onclick = function (){
-    count();
-    item[2].style.display = 'flex';
-}
-
-btn[3].onclick = function (){
-    count();
-    item[3].style.display = 'flex'
-}
-
-btn[4].onclick = function (){
-    count();
-    item[4].style.display = 'flex'
-}
-
-btn[5].onclick = function (){
-    count();
-    item[5].style.display = 'flex'
-}
-
-btn[6].onclick = function (){
-    count();
-    item[6].style.display = 'flex'
-}
-
-btn[7].onclick = function (){
-    count();
-    item[7].style.display = 'flex'
-}
-
-btn[8].onclick = function (){
-    count();
-    item[8].style.display = 'flex'
+function pay_(){
+    let orderDeets ={}
+    let user_data = JSON.parse(localStorage.getItem('user'));
+    orderDeets.phone = user_data.phone;
+    orderDeets.amount = totalFee.innerText;
+    localStorage.setItem('order', JSON.stringify(orderDeets))
+    let current = window.location.href;
+    window.location.href = window.location.href.replace(current, 'https://paystack.com/pay/lunch-up');
 }
