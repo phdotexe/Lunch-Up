@@ -110,7 +110,7 @@
                 <p class="delivery__time">Delivery:</p> <span class='time'>20-30 minutes</span>
             </div>
         </div>
-        <section class="container-fluid flexed-item py-2 my-2">
+        <section class="container-fluid flexed-item py-2 my-2 food-list" id="food-list">
             <div class="food__container">
                 <div class="food__container__img1 food-bg">
 
@@ -270,27 +270,19 @@
         </footer>
     </main>
 
-    <!-- <script>
-       let btn = document.getElementById('btn');
-        let number = document.getElementById('number');
-        let food = document.getElementsByClassName('.food__container__food-name')
-
-        let counter = 0
-
-          
-            function count(){
-                counter++; 
-                number.innerHTML = counter;
-            }
-
-   </script> -->
     <script src="./user.js"></script>
     <script src="./chicken.js"></script>
     <script src="./modal.js"></script>
     <script src="./search.js"></script>
 
     <script>
+        let MySearchinput = document.getElementById('search');
+        MySearchinput.focus()
 
+        MySearchinput.addEventListener('keyup', function(){
+            search('food-list', "food__container", ".food__container__label p.food__container__food-name" )
+        }
+        )
         var loader = document.getElementById("preloader");
         setTimeout(loads, 500);
 
