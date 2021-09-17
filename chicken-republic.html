@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -9,273 +10,267 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./Css/chicken-republic.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-   <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic
    ,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
-   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-   <link rel="stylesheet" href="./Css/food-stations.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Css/food-stations.css">
 </head>
+
 <body>
-  <div id="preloader"></div>
+    <div id="preloader"></div>
     <header>
-      <nav class="nav-bar">
-        <div class="nav-bar__logo logged-in">
-            <a href="./index.html">LunchUp</a>
-        </div>
-        <ul class="nav-bar__list profile">
-            <li class="nav-bar__list__item">
-                <a href="./index.html">Home</a>
-            </li>
-            <li class="nav-bar__list__item">
-                <a href="./about.html">About</a>
-            </li>
-            <!-- <li class="nav-bar__list__item">
+        <nav class="nav-bar">
+            <div class="nav-bar__logo logged-in">
+                <a href="./index.html">LunchUp</a>
+            </div>
+            <ul class="nav-bar__list profile">
+                <li class="nav-bar__list__item">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="nav-bar__list__item">
+                    <a href="./about.html">About</a>
+                </li>
+                <!-- <li class="nav-bar__list__item">
                 <a href="./tray.html">Tray</a>
             </li> -->
-            <li class="nav-bar__list__item dropdown" onclick="dropdown()">
-                        <i class="ri-user-3-line" id="profile_icon"><i class="ri-arrow-down-s-fill"></i></i>
+                <li class="nav-bar__list__item dropdown" onclick="dropdown()">
+                    <i class="ri-user-3-line" id="profile_icon"><i class="ri-arrow-down-s-fill"></i></i>
                     <ul id="dropdown-content">
                         <li><a href="./profile.html">Profile</a></li>
                         <li id="logout"><a href="./login.html">Logout</a></li>
                     </ul>
-            </li>
-        </ul>
-        <i class="ri-menu-line" id="hamburger" click="myFunction()"></i>
-    </nav>
-
-
-
+                </li>
+            </ul>
+            <i class="ri-menu-line" id="hamburger" click="myFunction()"></i>
+        </nav>
         <div class="search-box">
-          <div class="search-box__item">
-              <label for="search"><i class="ri-search-line"></i></label>
-              <input type="search" id="search" placeholder="Search foods">
-          </div>
-          <button type="submit" class="search-box__btn">Search</button>
-      </div>
-
-
-
-
-
+            <div class="search-box__item">
+                <label for="search"><i class="ri-search-line"></i></label>
+                <input type="search" id="search" placeholder="Search foods">
+            </div>
+            <button type="submit" class="search-box__btn">Search</button>
+        </div>
     </header>
     <main>
         <!-- <img src="./img/half-piece image.png" class = 'small-piece' alt="small-piece image"> -->
-          <div class="cartt">
+        <div class="cartt">
             <div class="cart-number" data-bs-toggle="modal" data-bs-target="#foodmodal">
-              <i class="ri-shopping-cart-fill"></i>
-              <div id = 'number' class="number">0</div>
+                <i class="ri-shopping-cart-fill"></i>
+                <div id='number' class="number">0</div>
             </div>
             <div class="modal fade" id="foodmodal" tabindex="-1" aria-labelledby="foodmodalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                  <div class="modal-content">
-                    <form action="./Payment.html">
-                    <div class="modal-header">
-                      <h5 class="modal-title title" id="foodmodalLabel">Tray</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title title" id="foodmodalLabel">Tray</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="header-text d-flex">
+                                <h5>Chicken Republic</h5>
+                                <button class="clear" id="clear">Clear Tray</button>
+                            </div>
+                            <div class="header-time">
+                                <i class="bx bx-time"></i><span>20mins</span>
+                                <i class="bx bx-map"></i><span>Rumuola</span>
+                            </div>
+                            <h6 class="order">Your Order</h6>
+                            <div class="cds">
+
+                            </div>
+                            <div class="total subtotal d-flex text-secondary">
+                                <p>Sub Total</p>
+                                <p id="subtotal">0</p>
+                            </div>
+                            <div class="total delivery-fee d-flex text-secondary">
+                                <p>Delivery fee</p>
+                                <p id="delivery">₦200</p>
+                            </div>
+                            <div class="total total1 d-flex fw-bold">
+                                <p>Total</p>
+                                <p id="totalFee">0</p>
+                            </div>
+                        </div>
+                        <form id="myForm">
+                            <div class="modal-footer">
+                                <button type="submit" id="orderBtn" class="btn-order">Order</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="modal-body">
-                      <div class="header-text d-flex">
-                        <h5>Chicken Republic</h5>
-                        <button class="clear">Clear Tray</button>
-                      </div>
-                      <div class="header-time">
-                        <i class="bx bx-time"></i><span>20mins</span>
-                        <i class="bx bx-map"></i><span>Rumuola</span>
-                      </div>
-                      <h6 class="order">Your Order</h6>
-                      <div class="cds">
-                        
-                      </div>
-                      <div class="total subtotal d-flex text-secondary">
-                        <p>Sub Total</p>
-                        <p id="subtotal">0</p>
-                      </div>
-                      <div class="total delivery-fee d-flex text-secondary">
-                        <p>Delivery fee</p>
-                        <p id="delivery">₦200</p>
-                      </div>
-                      <div class="total total1 d-flex fw-bold">
-                        <p>Total</p>
-                        <p id="totalFee">0</p>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" id="orderBtn" class="btn-order">Order</button>
-                    </div>
-                  </form>
-                  </div>
                 </div>
-              </div>
+            </div>
         </div>
         <div class="food__text d-flex justify-content-between px-3 mx-3">
             <div class="food__details">
-                <h2 class = 'food__station'>Chicken Republic</h2>
+                <h2 class='food__station'>Chicken Republic</h2>
                 <p class="food__details_desc">38 meals available for order</p>
             </div>
             <div class="food__time">
-              <p class="delivery__time">Open:</p> <span class = 'time'>8:00 am - 10:00 pm</span><br>
-              <p class="delivery__time">Delivery:</p> <span class = 'time'>20-30 minutes</span>
+                <p class="delivery__time">Open:</p> <span class='time'>8:00 am - 10:00 pm</span><br>
+                <p class="delivery__time">Delivery:</p> <span class='time'>20-30 minutes</span>
             </div>
         </div>
-    <section class="container-fluid flexed-item py-2 my-2" id = 'food_list'>
-        <div class="food__container">
-            <div class="food__container__img1 food-bg">
-                
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Chicken Pot</p>
-                <p class = 'fw-bolder food__container__price my-0'>₦2500</p>
-            </div>
-            
-                <button id = 'btn' class=" food__container__CTA my-0">Add to tray</button>
-            
-        </div>
-        <div class="food__container">
-            <div class="food__container__img2 food-bg">
-                
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Jellof rice</p>
-                <p class = 'fw-bolder food__container__price my-0'> ₦800</p>
-            </div>
-            
-                <button id = 'btn' class="food__container__CTA my-0">Add to tray</button>
-            
-        </div>
-        <div class="food__container ">
-            <div class="food__container__img3 food-bg">
-               
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Fried Rice</p>
-                <p class = 'fw-bolder food__container__price my-0'> ₦900</p>
-            </div>
-            
-                <button id = 'btn' class="food__container__CTA my-0">Add to tray</button>
-            
-        </div>
-        <div class="food__container">
-            <div class="food__container__img4 food-bg">
-                
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Coconut</p>
-                <p class = 'fw-bolder food__container__price my-0'> ₦700</p>
-            </div>
-            
-                <button id = 'btn' class="food__container__CTA my-0">Add to tray</button>
-            
-        </div>
-        <div class="food__container">
-            <div class="food__container__img5 food-bg">
-                
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Meat Pie</p>
-                <p class = 'fw-bolder food__container__price my-0'>₦400</p>
-            </div>
-            
-                <button id = 'btn' class="food__container__CTA my-0">Add to tray</button>
-            
-        </div>
-        <div class="food__container ">
-            <div class="food__container__img6 food-bg">
-              
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Grilled Chicken</p>
-                <p class = 'fw-bolder food__container__price my-0'>₦1200</p>
-            </div>
-            
-                <button id = 'btn' class="food__container__CTA my-0">Add to tray</button>
-            
-        </div>
-        <div class="food__container">
-            <div class="food__container__img7 food-bg">
-               
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Chicken Burger</p>
-                <p class = 'fw-bolder food__container__price my-0'>₦400</p>
-            </div>
-            
-                <button type="button" id = 'btn' class="food__container__CTA my-0">Add to tray</button>
-        </div>
-        <div class="food__container">
-            <div class="food__container__img8 food-bg">
-               
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Egg Roll</p>
-                <p class = 'fw-bolder food__container__price my-0'> ₦300</p>
-            </div>
-            
-                <button id = 'btn' class="food__container__CTA my-0">Add to tray</button>
-            
-        </div>
-        <div class="food__container ">
-            <div class="food__container__img9 food-bg">
-               
-            </div>
-            <div class=" d-flex justify-content-between py-3 food__container__label">
-                <p class="food__container__food-name my-0 py-1">Coke</p>
-                <p class = 'fw-bolder food__container__price my-0'> ₦300</p>
-            </div>
-            
-                <button id = 'btn' class="food__container__CTA my-0">Add to tray</button>
-            
-        </div>
-    </section>
-    <div class="mobile-app">
-      <div class="mobile-app__content">
-          <h3>Order right from your phone</h3>
-          <p>
-              LunchUp Food app makes it simple for anybody to use a mobile device to look over the menu of the best 
-              vendors and place an order for home delivery.
-          </p>
-          <div class="mobile-app__content__app-download">
-              <a href="#" class="mobile-app__content__app-download__link">
-                  <img id="googlePlay" src="./img/google-play.svg" alt="google-play">
-                  <div class="mobile-app__content__app-download__link__text">
-                      <p>GET IT ON</p>
-                      <h6>Google Play</h6>
-                  </div>
-              </a>
-              <a href="#" class="mobile-app__content__app-download__link">
-                  <i class="ri-apple-fill"></i>
-                  <div class="mobile-app__content__app-download__link__text">
-                      <p>Available on the</p>
-                      <h6>App Store</h6>
-                  </div>
-              </a>
-      
-          </div>
-      </div>
-      <div class="mobile-app__empty">
+        <section class="container-fluid flexed-item py-2 my-2">
+            <div class="food__container">
+                <div class="food__container__img1 food-bg">
 
-      </div>
-  </div>
-    <footer>
-      <div class="description">
-          <h5>LunchUp</h5>
-          <p>
-              LunchUp Food app makes it simple for anybody to use a mobile device to look over the menu of 
-              the best vendors and place an order for home delivery.
-          </p>
-      </div>
-      <div class="footer-list">
-          <h6>Socials</h6>
-          <div class="footer-list__items">
-              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-              <a href="#"><i class="ri-instagram-fill"></i></a>
-              <a href="#"><i class="ri-twitter-fill"></i></a>
-              <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-          </div>
-      </div>
-      <h6 class="copyright">©2020 LunchUp</h6>
-  </footer>
-   </main>
-   
-   <!-- <script>
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Chicken Pot</p>
+                    <p class='fw-bolder food__container__price my-0'>₦2500</p>
+                </div>
+
+                <button id='btn' class=" food__container__CTA my-0">Add to tray</button>
+
+            </div>
+            <div class="food__container">
+                <div class="food__container__img2 food-bg">
+
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Jellof rice</p>
+                    <p class='fw-bolder food__container__price my-0'> ₦800</p>
+                </div>
+
+                <button id='btn' class="food__container__CTA my-0">Add to tray</button>
+
+            </div>
+            <div class="food__container ">
+                <div class="food__container__img3 food-bg">
+
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Fried Rice</p>
+                    <p class='fw-bolder food__container__price my-0'> ₦900</p>
+                </div>
+
+                <button id='btn' class="food__container__CTA my-0">Add to tray</button>
+
+            </div>
+            <div class="food__container">
+                <div class="food__container__img4 food-bg">
+
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Coconut</p>
+                    <p class='fw-bolder food__container__price my-0'> ₦700</p>
+                </div>
+
+                <button id='btn' class="food__container__CTA my-0">Add to tray</button>
+
+            </div>
+            <div class="food__container">
+                <div class="food__container__img5 food-bg">
+
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Meat Pie</p>
+                    <p class='fw-bolder food__container__price my-0'>₦400</p>
+                </div>
+
+                <button id='btn' class="food__container__CTA my-0">Add to tray</button>
+
+            </div>
+            <div class="food__container ">
+                <div class="food__container__img6 food-bg">
+
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Grilled Chicken</p>
+                    <p class='fw-bolder food__container__price my-0'>₦1200</p>
+                </div>
+
+                <button id='btn' class="food__container__CTA my-0">Add to tray</button>
+
+            </div>
+            <div class="food__container">
+                <div class="food__container__img7 food-bg">
+
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Chicken Burger</p>
+                    <p class='fw-bolder food__container__price my-0'>₦400</p>
+                </div>
+
+                <button type="button" id='btn' class="food__container__CTA my-0">Add to tray</button>
+            </div>
+            <div class="food__container">
+                <div class="food__container__img8 food-bg">
+
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Egg Roll</p>
+                    <p class='fw-bolder food__container__price my-0'> ₦300</p>
+                </div>
+
+                <button id='btn' class="food__container__CTA my-0">Add to tray</button>
+
+            </div>
+            <div class="food__container ">
+                <div class="food__container__img9 food-bg">
+
+                </div>
+                <div class=" d-flex justify-content-between py-3 food__container__label">
+                    <p class="food__container__food-name my-0 py-1">Coke</p>
+                    <p class='fw-bolder food__container__price my-0'> ₦300</p>
+                </div>
+
+                <button id='btn' class="food__container__CTA my-0">Add to tray</button>
+
+            </div>
+        </section>
+        <div class="mobile-app">
+            <div class="mobile-app__content">
+                <h3>Order right from your phone</h3>
+                <p>
+                    LunchUp Food app makes it simple for anybody to use a mobile device to look over the menu of the
+                    best
+                    vendors and place an order for home delivery.
+                </p>
+                <div class="mobile-app__content__app-download">
+                    <a href="#" class="mobile-app__content__app-download__link">
+                        <img id="googlePlay" src="./img/google-play.svg" alt="google-play">
+                        <div class="mobile-app__content__app-download__link__text">
+                            <p>GET IT ON</p>
+                            <h6>Google Play</h6>
+                        </div>
+                    </a>
+                    <a href="#" class="mobile-app__content__app-download__link">
+                        <i class="ri-apple-fill"></i>
+                        <div class="mobile-app__content__app-download__link__text">
+                            <p>Available on the</p>
+                            <h6>App Store</h6>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <div class="mobile-app__empty">
+
+            </div>
+        </div>
+        <footer>
+            <div class="description">
+                <h5>LunchUp</h5>
+                <p>
+                    LunchUp Food app makes it simple for anybody to use a mobile device to look over the menu of
+                    the best vendors and place an order for home delivery.
+                </p>
+            </div>
+            <div class="footer-list">
+                <h6>Socials</h6>
+                <div class="footer-list__items">
+                    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                    <a href="#"><i class="ri-linkedin-box-fill"></i></a>
+                </div>
+            </div>
+            <h6 class="copyright">©2020 LunchUp</h6>
+        </footer>
+    </main>
+
+    <!-- <script>
        let btn = document.getElementById('btn');
         let number = document.getElementById('number');
         let food = document.getElementsByClassName('.food__container__food-name')
@@ -289,30 +284,24 @@
             }
 
    </script> -->
-   <script src="./user.js"></script>
+    <script src="./user.js"></script>
     <script src="./chicken.js"></script>
     <script src="./modal.js"></script>
     <script src="./search.js"></script>
 
     <script>
 
-let MySearchinput = document.getElementById('search');
-MySearchinput.focus()
+        var loader = document.getElementById("preloader");
+        setTimeout(loads, 500);
 
-MySearchinput.addEventListener('keyup', function(){
-    search("food_list", "food__container", ".food__container__label p.food__container__food-name" )
-}
-)
+        function loads() {
+            loader.style.display = "none"
+        }
 
-      var loader = document.getElementById("preloader");
-      setTimeout(loads, 500);
-
-      function loads(){
-          loader.style.display = "none"
-      }
-      
-
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

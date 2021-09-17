@@ -181,7 +181,7 @@ b{
     flex-direction:column;
     padding: 30px;
     width: 100%;
-    height: 80%;
+    height: fit-content;
 }
 
 .order-history__header{

@@ -17,7 +17,6 @@ function myFunction(){
 let profile_icon = document.getElementById('profile_icon');
 let profile_dropdown = document.getElementById('profile_dropdown');
 let user = document.querySelector('.user');
-console.log(user)
 
 user.addEventListener('click', profile)
 

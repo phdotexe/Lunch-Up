@@ -241,6 +241,7 @@ body{
                 margin-top: 0.5%;
                 padding: 0px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                color: white;
                 #logout{
                     border-top: 1px solid #7C7C7C;
                 }
@@ -337,9 +338,7 @@ body{
     }
     }
     &__menu{
-        //  display: grid;
-        //  grid-template-columns: 1fr 1fr 1fr;
-        //  column-gap: 13.6%;
+        
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;

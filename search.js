@@ -1,5 +1,4 @@
 function search(container, cardss, searchtext ) {
-    console.log(container, cardss, searchtext )
     var input, filter, cards, cardContainer, title, filtertext, i;
     input = document.getElementById("search");
     filter = input.value;
@@ -20,12 +19,3 @@ function search(container, cardss, searchtext ) {
       }
     }
 }
-let input = document.getElementById('search');
-input.focus()
-
-input.addEventListener('keyup', function(){
-    search("food_list", "food__container", ".food__container__label p.food__container__food-name" )
-
-}
-
-)
