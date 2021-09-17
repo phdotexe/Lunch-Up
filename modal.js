@@ -169,15 +169,15 @@ function pay_(e){
     orderDeets.phone = user_data.phone;
     orderDeets.amount = totalFee.innerText;
     localStorage.setItem('order', JSON.stringify(orderDeets))
-    // let current = window.location.href;
-    // window.location.href = window.location.href.replace(current, 'Payment.html');
-    let localServer = '127.0.0.1:5502';
-    let current_href = window.location.href;
-    let current_pathname = window.location.pathname;
+    let current = window.location.href;
+    window.location.href = window.location.href.replace(current, 'Payment.html');
+    // let localServer = '127.0.0.1:5502';
+    // let current_href = window.location.href;
+    // let current_pathname = window.location.pathname;
 
-    if(window.location.href.includes(localServer)) {
-        window.location.href = window.location.href.replace(current_pathname, '/Payment.html');
-    }else{
-        window.location.href = window.location.href.replace(current_pathname, `${current_pathname}Payment.html`);
-    }    
+    // if(window.location.href.includes(localServer)) {
+    //     window.location.href = window.location.href.replace(current_pathname, '/Payment.html');
+    // }else{
+    //     window.location.href = window.location.href.replace(current_pathname, `${current_pathname}Payment.html`);
+    // }    
 }
