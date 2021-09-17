@@ -40,11 +40,14 @@
             <h1>Order Food Faster, Easier <br> And Conveniently</h1>
 
             <div class="search-box landing-search">
-                <div class="search-box__item">
-                    <label for="search"><i class="ri-map-pin-fill"></i></label>
-                    <input type="search" id="search" placeholder="Enter delivery address">
-                </div>
-                <a href="./signup.html" type="submit" class="search-box__btn">Search</a>
+                <form action=""id = 'myForm' >
+                    <div class="search-box__item">
+                        <label for="search"><i class="ri-map-pin-fill"></i></label>
+                        <input type="search" id="search" autocomplete="off" required = 'true' placeholder="Enter delivery address">
+                    </div>
+                    <button class="search-box__btn">Search</button>
+                </form>
+               
             </div>
             <div class="box">
                 <div class="box-img1">
@@ -139,5 +142,6 @@
             
     </main>
           <script src="./nav.js"></script>
+          <script src = './index.js'></script>
 </body>
 </html>

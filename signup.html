@@ -30,11 +30,11 @@
 
             <form>
                 
-                <input type="text" id="fname" name="fname" placeholder="Name" required>
+                <input type="text" id="fname" name="fname"  placeholder="Name" required>
             
-                <input type="number" id="phone" name="phone" placeholder="Phone Number" required>
+                <input type="number" id="phone" name="phone" maxlength="11" placeholder="Phone Number" required>
 
-                <input type="number" id="backupPhone" name="backup phone" placeholder="Backup Phone number" required>
+                <input type="number" id="backupPhone" minlength="11" name="backup phone" placeholder="Backup Phone number" required>
 
                 <input type="password" name="password" id="password" placeholder="Password" required>
 
@@ -54,7 +54,7 @@
 
                 <div class="sign-up__text">
                     <div id="log">Already have an account? <a class="sign-up__link" href="./login.html">Log in</a></div>
-                    <!-- <div id="skip"><a class="sign-up__link" href="./food-stations.html">Skip for now</a></div> -->
+                    
                 </div>
 
             </form>

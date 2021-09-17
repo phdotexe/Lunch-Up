@@ -89,7 +89,20 @@ h2{
     justify-content: space-evenly;
     margin-bottom: 185px;
 }
-
+.search-box{
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+}
+#myForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.search-box__item{
+    width: 100%;
+    
+}
 .section-3__img{
     display: flex;
     flex-direction: row;
@@ -257,6 +270,22 @@ h4{
         background-size: 90% 150px;
         background-position: 100% 100%;
     }
+    #myForm{
+    flex-direction: column;
+    }
+    
+    .search-box__item{
+        margin:auto
+        
+    }
+    
+    button.search-box__btn{
+        width: 50%;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        
+    } 
      h2{
     font-size: 34px;
     font-family: poppinsbold;
