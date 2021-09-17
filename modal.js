@@ -184,12 +184,19 @@ function pay_(e) {
     let user_data = JSON.parse(localStorage.getItem('user'));
     orderDeets.phone = user_data.phone;
     orderDeets.amount = totalFee.innerText;
+    let name_ = document.querySelectorAll('.price_')
+    let orderDeets_ = {}
+    name_.forEach((e => {
+        orderDeets_[e.previousElementSibling.innerText] = e.innerText;
+    }))
+    localStorage.setItem('orderDetails', JSON.stringify(orderDeets_))
     localStorage.setItem('order', JSON.stringify(orderDeets))
-    window.location.href = window.location.href.replace(window.location.href, 'Payment.html');
-    cartBox.innerHTML = ''
-    let user_login = {}
-    user_login.phone = user_data.phone;
-    user_login.password = user_data.password;
-    sessionStorage.clear();
-    sessionStorage.setItem('user_login', JSON.stringify(user_login))
+    // window.location.href = window.location.href.replace(window.location.href, 'Payment.html');
+    // cartBox.innerHTML = ''
+    // let user_login = {}
+    // user_login.phone = user_data.phone;
+    // user_login.password = user_data.password;
+    // sessionStorage.clear();
+    // sessionStorage.setItem('user_login', JSON.stringify(user_login))
 }
+

@@ -349,6 +349,7 @@ body footer .copyright {
   padding: 0px;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 .nav-bar__list .dropdown #dropdown-content #logout {
