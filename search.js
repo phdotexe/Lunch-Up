@@ -19,3 +19,13 @@ function search(container, cardss, searchtext ) {
       }
     }
 }
+
+
+// This takes a param the card holding all the containers, the parent element of the searchable text, and the input value
+// let MySearchinput = document.getElementById('search');
+// MySearchinput.focus()
+
+// MySearchinput.addEventListener('keyup', function(){
+//     search('food-stations__menu', "food-stations__menu__item", ".food-stations__menu__item__text p" )
+// }
+// )
