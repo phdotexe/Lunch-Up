@@ -62,6 +62,29 @@ function addtoCart(e) {
     foods.img = imageURL;
     sessionStorage.setItem(food_name, JSON.stringify(foods))
     number.innerText = sessionStorage.length-1;
+
+    // Testing 
+
+    let nameInDB = localStorage.getItem('user')
+    let userprofile = JSON.parse(nameInDB)
+
+
+    let foodsInSessionStorage = sessionStorage.getItem(food_name)
+    let sessionfoods = JSON.parse(foodsInSessionStorage)
+    axios.post('https://sheetdb.io/api/v1/nmh5sidkymy9q',{
+        "data": {"USER": userprofile.name, "FOODITEM": sessionfoods.name, "PRICE" : sessionfoods.price}
+    }).then( response => {
+        console.log(response.data);
+    });
+    axios.get('https://sheetdb.io/api/v1/nmh5sidkymy9q')
+    .then( response => {
+        console.log(response.data);
+    });
+
+
+
+
+
 }
 
 // getting the items from session storage to the cart on click
